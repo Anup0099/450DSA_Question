@@ -14,6 +14,7 @@ public class first {
         }
     }
 
+
     static void p2(int n) {
         for (int row = 1; row <= n; row++) {
             for (int col = 1; col <= n - row + 1; col++) {
