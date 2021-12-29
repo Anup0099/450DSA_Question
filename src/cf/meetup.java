@@ -35,19 +35,36 @@ public class meetup {
         pzz(n-1);
         System.out.println("post"+n);
     }
+
     public static void main(String[] args) {
         Scanner scn = new Scanner(System.in);
         int n= scn.nextInt();
-        while(n-->0){
-            int x = scn.nextInt(),y= scn.nextInt(),z= scn.nextInt();
-            if (x+y>z){
-                System.out.println("TRAIN");
-            }else if (x+y<z){
-                System.out.println("PLANEBUS");
-            }else{
-                System.out.println("EQUAL");
+        while (n-->0){
+            //1010
+            int t= scn.nextInt();
+            String s = scn.next();
+            int c0=0,c1=0;
+            for (int i = 0; i <s.length() ; i++) {
+               if (s.charAt(i)=='1'){
+                    c1++;
+               }else{
+                   c0++;
+               }
             }
+            int ans = Math.max(0,Math.min(c0,c1)-1);
+            System.out.println(ans);
+
         }
+//        while(n-->0){
+//            int x = scn.nextInt(),y= scn.nextInt(),z= scn.nextInt();
+//            if (x+y>z){
+//                System.out.println("TRAIN");
+//            }else if (x+y<z){
+//                System.out.println("PLANEBUS");
+//            }else{
+//                System.out.println("EQUAL");
+//            }
+//        }
 
 //        while (n-->0){
 //            int t = scn.nextInt();
