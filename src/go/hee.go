@@ -44,5 +44,7 @@ func main() {
 
     fmt.Printf("the whole array %v\n",bookings)
     fmt.Printf("the first element %v\n", bookings[0])
+    
 
+    
 }

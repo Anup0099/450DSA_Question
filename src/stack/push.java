@@ -45,23 +45,62 @@ public class push {
         }
         return nge;
     }
-public static int[] nextGreaterelemnt(int[]nums,int []query){
-        int arr1[]= solve(nums);
-    HashMap<Integer,Integer>hm= new HashMap<>();
-    for (int i = 0; i < nums.length; i++) {
-        hm.put(nums[i],arr1[i]);
+
+    public static int[] nextGreaterelemnt(int[] nums,
+                                          int[] query) {
+        int arr1[] = solve(nums);
+        HashMap<Integer, Integer> hm = new HashMap<>();
+        for (int i = 0; i < nums.length; i++) {
+            hm.put(nums[i], arr1[i]);
+        }
+        int ans[] = new int[query.length];
+        for (int i = 0; i < query.length; i++) {
+            ans[i] = hm.get(query[i]);
+        }
+        return ans;
+
+
     }
-    int ans[] = new int[query.length];
-    for (int i = 0; i < query.length ; i++) {
-        ans[i]=hm.get(query[i]);
+
+    public boolean isValid(String s) {
+        Stack<Character> st = new Stack<>();
+        for (int i = 0; i < s.length(); i++) {
+            char ch = s.charAt(i);
+            if (ch == '(' || ch == '{' || ch == '[') {
+                st.push(ch);
+            } else {
+                if (st.empty()) {
+                    return false;
+                } else {
+                    char r = st.peek();
+                    st.pop();
+                    if (r == '(' && ch != ')') {
+                        return false;
+                    } else if (r == '{' && ch != '}') {
+                        return false;
+                    } else if (r == '[' && ch != ']') {
+                        return false;
+                    }
+                }
+            }
+        }
+        return st.isEmpty();
     }
-    return ans;
-        
-        
-}
+
+    public static void reverse(int n) {
+        int ans = 0;
+        while (n > 0) {
+            ans = n % 10;
+            n = n / 10;
+            System.out.println(ans);
+        }
+
+    }
+
     public static void main(String[] args) {
-        int[] arr = {1, 2, 8, 56, 56, 9};
-        System.out.println(solve(arr));
-        System.out.println(remove("(())"));
+        Scanner scn = new Scanner(System.in);
+
+        reverse(754);
+
     }
 }

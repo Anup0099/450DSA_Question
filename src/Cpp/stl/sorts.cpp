@@ -47,7 +47,61 @@ void reverseIterator(vector<int>::reverse_iterator it1, vector<int>::reverse_ite
     cout<<endl;
     
 }
+/*inserts an element x to the unordered set s */
+void insert(unordered_set<int> &s,int x)
+{
+	//Your code here
+    s.insert(x);
+
+	
+}
+void erase(unordered_set<int> &s,int x)
+{
+	//Your code here
+    s.erase(x);
+}
+
+/*returns 1 if the element x is present
+in unordered set s else returns -1 */
+int find(unordered_set<int> &s,int x)
+{
+     //Your code here
+        if(s.find(x)!=s.end()){
+            return 1;
+        }
+        
+}
+int size(unordered_set<int> &s)
+{
+      //Your code here
+        return s.size();
+      
+}
+vector<int> stringSearch(string big,string small){
+    //store the occurrences in the result vector
+    vector<int> result = {};
+    //Your code here
+   int index=big.find(small);
+    while(index!=-1){
+         result.push_back(index);
+         index=big.find(small,index+1);
+    }
+     return result;
+
+
+
+}
 
 int main(){
+    
 
+    string para= "lorem ipsum dolor sit amet, consectetur adip";
+    string word ;
+    getline(cin,word);
+    size_t index= para.find(word,index+1);
+
+    string c ;
+    cout<<c.tolower()<<endl;
+
+    
 }
