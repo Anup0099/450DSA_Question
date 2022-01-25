@@ -4,26 +4,34 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class combinationSum {
-    public static void main(String[] args) {
+    public List<List<Integer>> combinationSum(int[] candidates, int target) {
+        List<List<Integer>>ans = new ArrayList<>();
 
+        findConbination(0,candidates,target,ans,new ArrayList<>());
+        return ans;
     }
-    public static void findcombinat(int ind,int[]arr,int target,
-                                    List<List<Integer>>ans,List<Integer>ds){
-        if (ind == arr.length){
+
+    private void findConbination(int index,int[]arr,int target,
+                                 List<List<Integer>>ans,List<Integer>ds) {
+        if (index== arr.length){
             if (target==0){
-                ans.add(new ArrayList<>(ds));
+                ans.add(ds);
+
             }
             return;
         }
-        if (arr[ind]==target){
-            ds.add(arr[ind]);
-            findcombinat(ind,arr,target-arr[ind],ans,ds);
+        if (arr[index]<=target){
+            ds.add(arr[index] );
+            findConbination(index,arr,target-arr[index],ans,ds);
             ds.remove(ds.size()-1);
-        }
-    }
-   public static List<List<Integer>>combinat(int[] candidates, int target){
-        List<List<Integer>>ans = new ArrayList<>();
 
-        return ans;
+        }
+        findConbination(index+1,arr,target,ans,ds);
+
     }
+
+    public static void main(String[] args) {
+
+    }
+
 }
