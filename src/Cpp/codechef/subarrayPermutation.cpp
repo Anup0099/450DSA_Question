@@ -5,8 +5,8 @@ int main(){
     int t;cin>>t;
     while(t--){
         int n,k;cin>>n>>k;
-        if(n>1 && k==1)cout<<-1<<endl;
-        continue;
+        if(n>1 && k==1){cout<<-1<<endl;
+        continue;}
 
         vector<int >v(n);
         iota(v.begin(),v.end(),1);
