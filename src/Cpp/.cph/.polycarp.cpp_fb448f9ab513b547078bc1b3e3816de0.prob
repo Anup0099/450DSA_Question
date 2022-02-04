@@ -1,0 +1,1 @@
+{"name":"Local: polycarp","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\Cpp\\polycarp.cpp","tests":[{"id":1643967065813,"input":"3\n6\n3 4 2 4 1 2\n3\n1000 1002 998\n3\n12 11 13","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\Cpp\\polycarp.cpp","group":"local","local":true}
