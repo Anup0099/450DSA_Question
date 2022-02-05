@@ -1,0 +1,1 @@
+{"name":"Local: Abc","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\Cpp\\codechef\\Abc.cpp","tests":[{"id":1643555201511,"input":"4\n1\n1\n2\n10\n2\n01\n7\n1010111","output":"YES\nYES\nYES\nNO"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\Cpp\\codechef\\Abc.cpp","group":"local","local":true}
