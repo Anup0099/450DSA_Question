@@ -2,15 +2,11 @@
 #define ll long long
 #define fastio  
 using namespace std;
- int minimumSum(int n) {
-        int a=0;
-        int b=0;
-        for (size_t i = 0; i < n; i++)
-        {
-            /* code */
-            a+=i;
-
-        }
+ int minimumSum(int num) {
+         string s = to_string(num);
+        sort(s.begin(), s.end());
+        int res = (s[0] - '0' + s[1] - '0') * 10 + s[2] + s[3] - '0' - '0';
+        return res;
        
 
 
@@ -48,5 +44,6 @@ int minSum(int arr[],int n){
 
 }
 int main(){
+    cout<<minimumSum(2932);
 
 }
