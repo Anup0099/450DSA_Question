@@ -2,9 +2,7 @@
 #define ll long long
 #define fastio
 using namespace std;
-long long smallestNumber(long long num)
-{
-}
+
 vector<int> sortEvenOdd(vector<int> &nums)
 {
 
@@ -64,4 +62,31 @@ int main()
     // {
     //     cout << c << endl;
     // }
+    int n;
+    cin >> n;
+    int i = 1;//row
+    int count=i;
+    while (i <= n)//saari row hai ye 😊
+    {
+        /* code */
+        int j=1;
+        
+        while (j<=i)//saari column hai ye
+        {   
+            // cout<<count<<" ";
+            // count++;
+            // cout<<count;
+            // count++;
+            // j++;
+            cout<<count;
+            j++;
+            count++;
+            
+
+
+        }
+        cout<<endl;
+        i++;
+        
+    }
 }

@@ -5,6 +5,7 @@ using namespace std;
 long long smallestNumber(long long num)
 {
    string nums = to_string(num);
+   sort(nums.begin(),nums.end());
 
 }
 int bitwiseComplement(int n)

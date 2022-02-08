@@ -1,6 +1,6 @@
 package oops;
 
-public class imaginary {
+public class Complex {
     private int x;
     private int y;
     /**
@@ -26,3 +26,27 @@ public class imaginary {
         );
 
     }
+    public Complex Subtract(Complex o) {
+        return new Complex(
+                this.x - o.x,
+                this.y - o.y
+        );
+
+    }
+    public Complex Multiply(Complex o) {
+        return new Complex(
+                this.x * o.x,
+                this.y * o.y
+        );
+
+    } public Complex Divide(Complex o) {
+        return new Complex(
+                this.x / o.x,
+                this.y / o.y
+        );
+
+    }
+
+
+
+}
