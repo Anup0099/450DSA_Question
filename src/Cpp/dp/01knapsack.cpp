@@ -32,6 +32,12 @@ int knapsack(int wt[],int profit[],int w,int N){
             return dp[n][amount]>1e4?-1:dp[n][amount];
         
     }
+
+
+     void nextPermutation(vector<int>& nums) {
+        
+    }
+
 int main(){
 
 
