@@ -1,44 +1,5 @@
-// #include <bits/stdc++.h>
-// #define ll long long
-// #define fastio
-// using namespace std;
 
-// int main()
-// {
-//     int t;
-//     cin >> t;
-//     // while(t--){
-//     //     int n;cin>>n;
-//     //     int ans = (n/2)+1;
-//     //     cout<<ans<<endl;
-//     // }
 
-//     while (t--)
-//     {
-//         int x, y;
-//         cin >> x >> y;
-//         int ans = x - y;
-//         int ans1 = 0;
-//         int sum = 0;
-//         int infected = 0;
-//         if (y == 0)
-//         {
-//             cout << x << endl;
-//         }
-//         else if ( ans > 0)
-//         {
-
-//             ans1 = y * 2;
-//             sum = ans + ans1;
-//             cout << sum << endl;
-//         }
-//         else 
-//         {
-//             infected = (y * 2) - 1;
-//             cout << infected;
-//         }
-//     }
-// }
 
 #include <iostream>
 #include <bits/stdc++.h>
@@ -101,7 +62,7 @@ istream& operator>>(istream &istream, pair<T1, T2> &p) { return (istream >> p.fi
 template<typename T> // cin >> vector<T>
 istream& operator>>(istream &istream, vector<T> &v){for (auto &it : v)cin >> it;return istream;}
 template<typename T1, typename T2> // cout << pair<T1, T2>
-ostream& operator<<(ostream &ostream, const pair<T1, T2> &p) { return (ostream << p.first << " " << p.second<<"\n"); }
+ostream& operator<<(ostream &ostream, const pair<T1, T2> &p) { return (ostream << p.first << " " << p.second); }
 template<typename T> // cout << vector<T>
 ostream& operator<<(ostream &ostream, const vector<T> &c) { for (auto &it : c) cout << it << " "; return ostream; }
  
@@ -150,18 +111,28 @@ bool isPowerOfTwo(int n){if(n==0)return false;return (ceil(log2(n)) == floor(log
 bool isPerfectSquare(ll x){if (x >= 0) {ll sr = sqrt(x);return (sr * sr == x);}return false;}
  
 
- 
 //Code
 void asquare()
 {
-    ll n;
-    cin>>n;
-    vll v(n);
-    cin>>v;
-    vll w=v;
-    sort(vr(w));
-    if(w==v)pn else py
-} 
+    ll l,r,k;
+    cin>>l>>r>>k;
+    if(l==r)
+    {
+        if(l>1)py
+        else pn
+    }
+    else
+    {
+        ll odd=(r-l+1)/2;
+        ll even=(r-l+1)/2;
+        if(r%2==l%2)
+        {
+            if(r%2==1)odd++;
+            else even++;
+        }
+        if(k>=odd)py else pn
+    }
+}
 //Main
 int main()
 {
@@ -175,3 +146,4 @@ int main()
     // asquare();
     return 0;
 }
+//End

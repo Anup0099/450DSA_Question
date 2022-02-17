@@ -1,45 +1,4 @@
-// #include <bits/stdc++.h>
-// #define ll long long
-// #define fastio
-// using namespace std;
-
-// int main()
-// {
-//     int t;
-//     cin >> t;
-//     // while(t--){
-//     //     int n;cin>>n;
-//     //     int ans = (n/2)+1;
-//     //     cout<<ans<<endl;
-//     // }
-
-//     while (t--)
-//     {
-//         int x, y;
-//         cin >> x >> y;
-//         int ans = x - y;
-//         int ans1 = 0;
-//         int sum = 0;
-//         int infected = 0;
-//         if (y == 0)
-//         {
-//             cout << x << endl;
-//         }
-//         else if ( ans > 0)
-//         {
-
-//             ans1 = y * 2;
-//             sum = ans + ans1;
-//             cout << sum << endl;
-//         }
-//         else 
-//         {
-//             infected = (y * 2) - 1;
-//             cout << infected;
-//         }
-//     }
-// }
-
+{
 #include <iostream>
 #include <bits/stdc++.h>
 // #include <sys/resource.h>
@@ -148,30 +107,4 @@ ll binaryToDecimal(string n){string num = n;ll dec_value = 0;int base = 1;int le
 bool isPrime(ll n){if(n<=1)return false;if(n<=3)return true;if(n%2==0||n%3==0)return false;for(int i=5;i*i<=n;i=i+6)if(n%i==0||n%(i+2)==0)return false;return true;}
 bool isPowerOfTwo(int n){if(n==0)return false;return (ceil(log2(n)) == floor(log2(n)));}
 bool isPerfectSquare(ll x){if (x >= 0) {ll sr = sqrt(x);return (sr * sr == x);}return false;}
- 
-
- 
-//Code
-void asquare()
-{
-    ll n;
-    cin>>n;
-    vll v(n);
-    cin>>v;
-    vll w=v;
-    sort(vr(w));
-    if(w==v)pn else py
-} 
-//Main
-int main()
-{
-    Code By Asquare
-    ll t;
-    cin>>t;
-    fl(i,t)
-    {
-        asquare();
-    }
-    // asquare();
-    return 0;
 }
