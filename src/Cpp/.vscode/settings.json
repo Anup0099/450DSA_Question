@@ -10,6 +10,7 @@
     "utility": "cpp",
     "valarray": "cpp",
     "ostream": "cpp",
-    "iostream": "cpp"
+    "iostream": "cpp",
+    "string": "cpp"
   }
 }
