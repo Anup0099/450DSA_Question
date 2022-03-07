@@ -50,7 +50,8 @@ add_executable(dp
         xorpalindrome.cpp mm.cpp mm.h lazysalesman.cpp lazysalesman.h)
 
 add_executable(mm mm.cpp)
-add_executable(01knapsack 01knapsack.cpp)
+add_executable(01knapsack 01knapsack.cpp main.cpp main.h)
 add_executable(lazysalesman lazysalesman.cpp)
 add_executable(cc3 cc3.cpp)
 add_executable(luvbinary codeforces/binarySearch/luvbinary.cpp)
+add_executable(main main.cpp)

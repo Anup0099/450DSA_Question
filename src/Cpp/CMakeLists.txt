@@ -126,3 +126,5 @@ add_executable(Cpp
         subsequences.cpp
         tempCodeRunnerFile.cpp
         vector.cpp)
+
+add_executable(beautifulMatricx codechef/beautifulMatricx.cpp)

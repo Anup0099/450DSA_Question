@@ -8,5 +8,10 @@
 using namespace std;
 
 int main(){
-    cout<<"hello"<<endl;
+    int input, row, col;
+    for (row = 1; row <= 5; ++row) {
+        for (int col = 0; col <= 5; ++col) {
+            cin >> input;
+        }
+    }
 }

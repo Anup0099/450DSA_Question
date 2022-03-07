@@ -6,11 +6,9 @@
 #define CPP_BEAUTIFULMATRICX_H
 
 
-
 class beautifulMatricx {
 
 };
-
 
 
 #endif //CPP_BEAUTIFULMATRICX_H

@@ -1,4 +1,6 @@
-"C:\Program Files\JetBrains\CLion 2021.3.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2021.3.3/bin/ninja/win/ninja.exe" -G Ninja C:\Users\Asus\IdeaProjects\DSA_Babber\src\Cpp\dp
--- Configuring done
--- Generating done
--- Build files have been written to: C:/Users/Asus/IdeaProjects/DSA_Babber/src/Cpp/dp/cmake-build-debug
+"C:\Program Files\JetBrains\CLion 2019.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" C:\Users\Asus\IdeaProjects\DSA_Babber\src\Cpp\dp
+CMake Error at CMakeLists.txt:1 (cmake_minimum_required):
+  CMake 3.21 or higher is required.  You are running version 3.15.3
+
+
+-- Configuring incomplete, errors occurred!
