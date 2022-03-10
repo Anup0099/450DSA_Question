@@ -1,0 +1,1 @@
+{"name":"Local: bit++","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\Cpp\\graphs\\constructive algo\\bit++.cpp","tests":[{"id":1646206435268,"input":"2\n++x\n--x","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\Cpp\\graphs\\constructive algo\\bit++.cpp","group":"local","local":true}
