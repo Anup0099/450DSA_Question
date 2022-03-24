@@ -1,1 +1,1 @@
-s='anup'
+  list5.append(j)
