@@ -138,3 +138,14 @@ print(list5)
 tel = {'jack': 4098, 'sape': 4139}
 tel['guido'] = 4127
 print(tel)
+# exception
+
+try:
+    age = (int(input("enter your age")))
+    weight = float(input("enter your weight"))
+    index = age/weight
+except ZeroDivisionError:
+    print("age and weight can't be zero")
+
+except ValueError:
+    print("please enter a valid age")
