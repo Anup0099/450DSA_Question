@@ -116,6 +116,11 @@
 
 
 # list comprehension
+from multiprocessing import Value
+from optparse import Values
+from random import sample
+
+
 list1 = [2, 9, 16, 25]
 list2 = [8, 27, 64, 125]
 
@@ -127,25 +132,41 @@ list5 = []
 #             list5.append(i)
 
 #             list5.append(j)
-for i in [2, 9, 16, 25]:
-    if(i % 2 == 0):
-        list5.append(i)
-for j in [8, 27, 64, 125]:
-    if(j % 2 == 0):
-        list5.append(j)
-print(list5)
+#
 
-tel = {'jack': 4098, 'sape': 4139}
-tel['guido'] = 4127
-print(tel)
-# exception
 
-try:
-    age = (int(input("enter your age")))
-    weight = float(input("enter your weight"))
-    index = age/weight
-except ZeroDivisionError:
-    print("age and weight can't be zero")
+key = [1, 2, 3, 4, 5]
+Value = ['a', 'b', 'c', 'd', 'e']
 
-except ValueError:
-    print("please enter a valid age")
+res = {}
+for i in key:
+    for j in Value:
+        res[i] = j
+        Value.remove(j)
+        break
+print(res)
+
+di = dict(zip(key, Value))
+print(str(di))
+
+# create  a dict and extract some value
+
+
+dict1 = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+dict2 = {'z': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}
+
+# dict = {**dict1, **dict2}
+# print(dict)
+# keeyy = ['anup', 'steve', 'vikushikari']
+
+# sample = ['one':1, 'two':2, 'three':3]
+# print(sample)
+
+lst = []
+n = int(input('input list'))
+for i in range(0, n):
+    ele = int(input())
+
+    lst.append(ele)
+print(lst)
+ 
