@@ -1,3 +1,5 @@
+
+import re
 # # write a function program
 # from collections import deque
 # from itertools import count
@@ -170,3 +172,20 @@ for i in range(0, n):
     lst.append(ele)
 print(lst)
  
+
+
+# regular expression
+
+# to search:
+
+
+
+
+txt="the rain in spain"
+# x=re.findall("[arn]",txt)
+x= re.search("ai",txt)
+print(x)
+if(x):
+    print("yes, there is at least one match")
+else:
+    print("no match")
