@@ -1,0 +1,1 @@
+return min(d, key=d.get)

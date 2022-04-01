@@ -18,6 +18,9 @@
 
 
 
+from traceback import print_tb
+
+
 class m:
 
     def __init__(self, name, age):
@@ -34,3 +37,34 @@ p1 = m('anup', 25)
 p2 = m('vikushikari', 26)
 print(p1.name)
 
+class  xam:
+    def __init__(self, name, age,id,email):
+        self.name = name
+        self.age = age
+        self.id = id
+        self.email = email
+
+
+    def exam(self):
+        print("exam is coming"+self.name)
+
+
+p1 = xam('anup', 25, '1234','anuppal602@gmail.com' )
+print("exam is coming",p1.name,p1.age,p1.id,p1.email)
+print(p1.exam())
+
+
+class Student:
+    def __init__(self, name, id):
+        self.name = name
+        self.id = id
+    def exam(self):
+        print("exam is coming"+self.name)
+    def getDetails(self):
+        print("name is",self.name,"id is",self.id)
+    
+
+p2 = Student('vikushikari', '1234')
+print("exam is coming",p2.name,p2.id)
+print(p2.exam())
+print(p2.getDetails())

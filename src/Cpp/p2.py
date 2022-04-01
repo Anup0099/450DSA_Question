@@ -28,3 +28,20 @@ while(choice != 'quit'):
     elif(choice == 'stop'):
         print('the car is stopped')
 print('sucesfully executed')
+
+
+
+class Student: 
+    def __init__(self, name, dept,salary):
+        self.name = name
+        self.dept = dept
+        self.salary = salary
+
+class movie:
+    def __init__(self,movie__title,movie_story,tariler):
+
+            self.title = movie__title
+            self.story = movie_story
+            self.tariler = tariler
+def showname(self):
+    print("titile of moovie")
