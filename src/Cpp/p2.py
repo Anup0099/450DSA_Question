@@ -45,3 +45,17 @@ class movie:
             self.tariler = tariler
 def showname(self):
     print("titile of moovie")
+
+
+phone = input("phone number")
+
+digits__mapping={
+    "1":"one",
+    "2":"two",
+    "3":"three",
+    "4":"four"
+}
+output = ""
+
+for cc in digits__mapping:
+   output += digits__mapping.get(cc,"not found")
