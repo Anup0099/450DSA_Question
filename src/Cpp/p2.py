@@ -16,18 +16,18 @@
 #         print('*',end='')
 #     print()
 
-print("welcome to car world")
+# print("welcome to car world")
 
-choice = input("enter help for instruction or press quit or exit")
-while(choice != 'quit'):
-    if(choice == 'help'):
-        print('move to start the car')
-        print('stop to stop the car')
-    if(choice == 'move'):
-        print('the car is moving')
-    elif(choice == 'stop'):
-        print('the car is stopped')
-print('sucesfully executed')
+# choice = input("enter help for instruction or press quit or exit")
+# while(choice != 'quit'):
+#     if(choice == 'help'):
+#         print('move to start the car')
+#         print('stop to stop the car')
+#     if(choice == 'move'):
+#         print('the car is moving')
+#     elif(choice == 'stop'):
+#         print('the car is stopped')
+# print('sucesfully executed')
 
 
 
