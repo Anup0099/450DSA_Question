@@ -11,3 +11,9 @@ class Student:
         print('Name is: '+self.name)
         print('Reg Id is: '+self.id)
         print('Mail Id is: '+self.mail)
+
+
+
+
+
+
