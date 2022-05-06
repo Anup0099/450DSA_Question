@@ -1,0 +1,1 @@
+{"name":"Local: revrsal","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\Cpp\\Leetcode\\revrsal.cpp","tests":[{"id":1647665277422,"input":"2\n5\n01100\n4\n0000","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\Cpp\\Leetcode\\revrsal.cpp","group":"local","local":true}

@@ -1,1 +1,0 @@
-{"version":1,"solutionFiles":{"lazysalesman.cpp":{"pathString":"lazysalesman.cpp","linkedProblemId":null,"testcases":[{"name":"Testcase #1","input":"input\n","output":"output"}]},"mm.cpp":{"pathString":"mm.cpp","linkedProblemId":null,"testcases":[{"name":"Testcase #1","input":"input\n3\n2 3 4\n1 5 2\n8 8 8","output":"output\n6\n5\n16"}]}}}

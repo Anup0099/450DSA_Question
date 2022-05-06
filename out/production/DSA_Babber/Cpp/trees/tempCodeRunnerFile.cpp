@@ -1,0 +1,1 @@
+ isBSt(root,INT_MIN,INT_MAX); 
