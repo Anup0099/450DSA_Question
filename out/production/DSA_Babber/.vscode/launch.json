@@ -3,5 +3,20 @@
     // Hover to view descriptions of existing attributes.
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
-    "configurations": []
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch mergeinterval",
+            "request": "launch",
+            "mainClass": "mergeinterval",
+            "projectName": "src_f9c7f5ec"
+        },
+        {
+            "type": "java",
+            "name": "Launch mergeinterval",
+            "request": "launch",
+            "mainClass": "Array.mergeinterval",
+            "projectName": "src_f9c7f5ec"
+        }
+    ]
 }
