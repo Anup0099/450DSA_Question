@@ -10,5 +10,10 @@
         "valarray": "cpp",
         "string": "cpp",
         "iostream": "cpp"
-    }
+    },
+    "java.project.sourcePaths": [
+        "Linkedlist",
+        "Graph",
+        "string"
+    ]
 }

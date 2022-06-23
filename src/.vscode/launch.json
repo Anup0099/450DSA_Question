@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch shortencoding",
+            "request": "launch",
+            "mainClass": "shortencoding",
+            "projectName": "src_f9c7f5ec"
+        },
+        {
+            "type": "java",
+            "name": "Launch middleoflist",
+            "request": "launch",
+            "mainClass": "middleoflist",
+            "projectName": "src_f9c7f5ec"
+        },
+        {
+            "type": "java",
+            "name": "Launch words",
+            "request": "launch",
+            "mainClass": "words",
+            "projectName": "src_f9c7f5ec"
+        },
+        {
+            "type": "java",
             "name": "Launch mergeinterval",
             "request": "launch",
             "mainClass": "mergeinterval",

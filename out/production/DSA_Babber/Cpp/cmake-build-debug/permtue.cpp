@@ -20,6 +20,30 @@ void fun(int n){
     cout<<n;
     fun(n-1);
 }
+// // string removeDigit(string number, char digit) {
+//     string s="";
+//     for(int i=0; i<number.length();i++){
+//         if(number[i]==digit){
+//             continue;
+//         }
+//         s += number[i];
+//     }
+//     return s;
+        
+//     }
+
+     string convert(int ind,string nums){
+        return nums.erase(ind,1);
+    }
+    
+    string removeDigit(string nums, char digit) {
+        string res;
+        for(int i = 0;i < nums.size();i++){
+            if(nums[i] == digit)
+                res = max(res,convert(i,nums));
+        }
+        return res;
+    }
 int main(){
-  fun(5);
+        cout<<removeDigit("123",'3');
 }

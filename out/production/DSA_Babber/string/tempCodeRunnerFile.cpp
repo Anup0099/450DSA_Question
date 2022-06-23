@@ -1,1 +1,1 @@
-    for (int i = 1; i <= words.size(); i++)
+<ans<<endl;
