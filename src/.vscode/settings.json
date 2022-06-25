@@ -9,7 +9,8 @@
         "utility": "cpp",
         "valarray": "cpp",
         "string": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "ostream": "cpp"
     },
     "java.project.sourcePaths": [
         "Linkedlist",
