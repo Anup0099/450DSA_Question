@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch unclejhonny",
+            "request": "launch",
+            "mainClass": "unclejhonny",
+            "projectName": "src_f9c7f5ec"
+        },
+        {
+            "type": "java",
             "name": "Launch shortencoding",
             "request": "launch",
             "mainClass": "shortencoding",
