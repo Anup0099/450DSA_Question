@@ -13,8 +13,9 @@
         "ostream": "cpp"
     },
     "java.project.sourcePaths": [
+        "string",
         "Linkedlist",
         "Graph",
-        "string"
+        "Binary"
     ]
 }
