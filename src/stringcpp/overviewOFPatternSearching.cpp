@@ -5,7 +5,8 @@ void patterSearch(string &text, string &pat)
     int n = text.size();
     int m = pat.size();
     for (int i = 0; i <= n - m; i++)
-    {   int j;
+    {
+        int j;
         for (j = 0; j < m; j++)
         {
             if (pat[j] != text[i + j])
