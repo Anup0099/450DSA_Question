@@ -1,0 +1,1 @@
+{"name":"Local: qatSchool","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\stringcpp\\qatSchool.cpp","tests":[{"id":1656778550457,"input":"5 1\nBGGBG\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\stringcpp\\qatSchool.cpp","group":"local","local":true}
