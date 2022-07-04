@@ -1,0 +1,12 @@
+# ninja log v5
+24	9881	6782687405154280	CMakeFiles/stringcpp.dir/findequilibriu,Point.cpp.obj	7536cc6d5acd7180
+42	9935	6782687405614330	CMakeFiles/stringcpp.dir/naivePatternSearchong.cpp.obj	e56683641f4abc15
+1	9977	6782687405624328	CMakeFiles/stringcpp.dir/checkforanagram.cpp.obj	a875b4c6b070f79c
+54	10075	6782687406834422	CMakeFiles/stringcpp.dir/minDistancetoTheTarget.cpp.obj	de94376ef85848f4
+32	10404	6782687410204678	CMakeFiles/stringcpp.dir/leftmostrepeatingelement.cpp.obj	44083925a3f74a71
+48	11142	6782687417445229	CMakeFiles/stringcpp.dir/nonRepeatingCharater.cpp.obj	16e9a92c690f1590
+9978	15387	6782687460418435	CMakeFiles/stringcpp.dir/overviewOFPatternSearching.cpp.obj	300b74cbbaf0eb65
+9936	15748	6782687464188669	CMakeFiles/stringcpp.dir/prefixSum.cpp.obj	f1d9465d5cacfd0b
+9893	15862	6782687465298771	CMakeFiles/stringcpp.dir/reverseastring.cpp.obj	eced4df6334e28da
+10405	15998	6782687466698897	CMakeFiles/stringcpp.dir/slidingwindow.cpp.obj	2188e0f329f0f557
+109	1733	6782687771935311	CMakeFiles/stringcpp.dir/reversestringOptimize.cpp.obj	717dce262e3e877d
