@@ -1,0 +1,1 @@
+{"name":"Local: games","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\cf\\games.cpp","tests":[{"id":1656942364513,"input":"3\n1 2\n2 4\n3 4","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\cf\\games.cpp","group":"local","local":true}
