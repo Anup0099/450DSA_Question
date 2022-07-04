@@ -24,10 +24,11 @@ void f(int index, vector<int> &ds, int s, int sum, int arr[], int n)
     ds.pop_back();
     f(index + 1, ds, s, sum, arr, n);
 }
+//print any subsequence only once
 bool fs(int ind, vector<int> v, int s, int sum, int arr[], int n)
 {
     if (ind == n)
-    {
+    {//condition satisfied
         if (s == sum)
         {
             for (auto it : v)
@@ -39,11 +40,12 @@ bool fs(int ind, vector<int> v, int s, int sum, int arr[], int n)
         }
     }
     else
-    {
+    {//condition not satified
         return false;
     }
     v.push_back(arr[ind]);
     s += arr[ind];
+    // recursion call is equals to true you got an answer
     if (fs(ind + 1, v, s, sum, arr, n) == true)
     {
         return true;
