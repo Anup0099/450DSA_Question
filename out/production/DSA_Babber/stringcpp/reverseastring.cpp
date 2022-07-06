@@ -1,10 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
 string reverse(string &s)
 {
-    
+
     stack<char> st;
     for (int i = 0; i < s.size(); i++)
     {
@@ -18,9 +17,18 @@ string reverse(string &s)
     }
     return ans;
 }
-int main(){
+void reverseString(vector<char> &s)
+{
+    reverse(s.begin(), s.end());
+    for (auto x : s)
+    {
+        cout << x;
+    }
+}
+int main()
+{
     string s;
-    cin>>s;
-    cout<<reverse(s);
+    cin >> s;
+    cout << reverse(s);
     return 0;
 }
