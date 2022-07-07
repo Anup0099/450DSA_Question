@@ -1,2 +1,4 @@
-package cf;public class lastOccurance {
+package cf;
+
+public class lastOccurance {
 }
