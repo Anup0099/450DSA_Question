@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ArrayImplementationOfStack",
+            "request": "launch",
+            "mainClass": "ArrayImplementationOfStack",
+            "projectName": "src_f9c7f5ec"
+        },
+        {
+            "type": "java",
+            "name": "Launch CircularInsetion",
+            "request": "launch",
+            "mainClass": "CircularInsetion",
+            "projectName": "src_f9c7f5ec"
+        },
+        {
+            "type": "java",
             "name": "Launch unclejhonny",
             "request": "launch",
             "mainClass": "unclejhonny",
@@ -78,17 +92,17 @@
             "stopAtEntry": false,
             "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": false, //set to true to see output in cmd instead
+            "externalConsole": false,
             "MIMode": "gdb",
             "miDebuggerPath": "C:\\MinGW64\\bin\\gdb.exe",
             "setupCommands": [
-              {
-                "description": "Enable pretty-printing for gdb",
-                "text": "-enable-pretty-printing",
-                "ignoreFailures": true
-              }
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
             ],
             "preLaunchTask": "g++ build & run active file"
-          }
+        }
     ]
 }

@@ -16,6 +16,7 @@
         "string",
         "Linkedlist",
         "Graph",
-        "Binary"
+        "Binary",
+        "stack"
     ]
 }

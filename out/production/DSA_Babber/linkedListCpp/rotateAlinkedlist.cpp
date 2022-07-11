@@ -12,3 +12,7 @@ struct node
     //     next = NULL;
     // }
 };
+
+int main(){
+    
+}

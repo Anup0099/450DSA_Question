@@ -1,4 +1,3 @@
-package cf;
 
 import java.util.Scanner;
 

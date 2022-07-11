@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ArrayImplementationOfStack",
+            "request": "launch",
+            "mainClass": "ArrayImplementationOfStack",
+            "projectName": "src_f9c7f5ec"
+        },
+        {
+            "type": "java",
             "name": "Launch CircularInsetion",
             "request": "launch",
             "mainClass": "CircularInsetion",
