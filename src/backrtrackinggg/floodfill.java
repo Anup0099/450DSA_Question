@@ -1,4 +1,3 @@
-package backrtrackinggg;
 
 import java.util.Scanner;
 
@@ -14,8 +13,19 @@ public class floodfill {
             }
         }
 
+        scn.close();
+
     }
     public static  void floodfills(int[][]maze,int row,int col,String psf){
-
+        if(row<0 || row>=maze.length || col<0 || col>=maze[0].length || maze[row][col]==0 || maze[row][col]==2){
+            return;
+        }
+        if(maze[row][col]==1){
+            maze[row][col]=2;
+            floodfills(maze,row+1,col,psf+"D");
+            floodfills(maze,row-1,col,psf+"U");
+            floodfills(maze,row,col+1,psf+"R");
+            floodfills(maze,row,col-1,psf+"L");
+        }
     }
 }

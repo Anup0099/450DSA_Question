@@ -1,4 +1,4 @@
-package Linkedlist;
+
 
 import java.util.*;
 
@@ -74,5 +74,6 @@ class palindrome {
         }
 
         System.out.println(isPalindrome(dummy.next));
+        scn.close();
     }
 }

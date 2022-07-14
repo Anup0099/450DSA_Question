@@ -4,7 +4,7 @@ import Recursion.TreeNode;
 
 public class IncreasingOrderSearchTree {
     public TreeNode increasingBST(TreeNode root) {
-
+    return root;
     }
 
 

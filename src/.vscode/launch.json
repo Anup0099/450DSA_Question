@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch maxNestingDeptOfString",
+            "request": "launch",
+            "mainClass": "maxNestingDeptOfString",
+            "projectName": "src_f9c7f5ec"
+        },
+        {
+            "type": "java",
             "name": "Launch ArrayImplementationOfStack",
             "request": "launch",
             "mainClass": "ArrayImplementationOfStack",

@@ -2,7 +2,7 @@ package Recursion;
 
 public class PoweroF2 {
     public static void main(String[] args) {
-        int n =9;
+        int n =5;
 
         System.out.println(isPowerOfTwo(n));
     }
