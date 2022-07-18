@@ -6,7 +6,7 @@ public class NodeB {
     public int data;
    public NodeB left, right;
 
-    NodeB(int k) {
+    public NodeB(int k) {
         data = k;
         left = null;
         right = null;

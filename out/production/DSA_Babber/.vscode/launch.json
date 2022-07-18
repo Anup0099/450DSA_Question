@@ -3,6 +3,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch powerSet2",
+            "request": "launch",
+            "mainClass": "powerSet2",
+            "projectName": "src_f9c7f5ec"
+        },
+        {
+            "type": "java",
+            "name": "Launch rightShift",
+            "request": "launch",
+            "mainClass": "rightShift",
+            "projectName": "src_f9c7f5ec"
+        },
+        {
+            "type": "java",
             "name": "Launch maxNestingDeptOfString",
             "request": "launch",
             "mainClass": "maxNestingDeptOfString",

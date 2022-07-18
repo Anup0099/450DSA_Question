@@ -16,9 +16,10 @@
     },
     "java.project.sourcePaths": [
         "string",
+        "stack",
         "Linkedlist",
         "Graph",
         "Binary",
-        "stack"
+        "Bitmanupulation"
     ]
 }
