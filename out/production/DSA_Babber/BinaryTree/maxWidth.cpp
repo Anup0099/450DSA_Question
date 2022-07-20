@@ -34,6 +34,7 @@ int maxwidth(Node *root)
     }
     return res;
 }
+
 int main()
 {
     Node *root = new Node(1);
