@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch treemap",
+            "request": "launch",
+            "mainClass": "treemap",
+            "projectName": "src_f9c7f5ec"
+        },
+        {
+            "type": "java",
             "name": "Launch powerSet2",
             "request": "launch",
             "mainClass": "powerSet2",
