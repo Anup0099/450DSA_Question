@@ -21,3 +21,10 @@ string longestNiceSubstring(string s)
     return s;
     
 }
+
+
+int main(){
+    string s = "abcd";
+    cout<<longestNiceSubstring(s)<<endl;
+    return 0;
+}

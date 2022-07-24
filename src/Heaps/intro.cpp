@@ -1,5 +1,5 @@
-class Minheap{
-    int size;
+struct Minheap{
+    int  size;
     int arr[size];
     int capacity;
     Minheap(int c){
@@ -9,6 +9,17 @@ class Minheap{
 
     }
     int left(int i){
-        
+        return (2*1+1);
     }
+    int right(int i){
+        return (2*1+2);
+    }
+    int parent(int i){
+        return (i-1)/2;
+    }
+};
+
+
+int main(){
+    
 }
