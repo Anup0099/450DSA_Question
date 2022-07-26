@@ -1,4 +1,4 @@
-package Array;
+// package Array;
 
 import java.util.Arrays;
 
@@ -17,7 +17,7 @@ public class ArraySubset {
     }
     static int set(int []arr){
         int limit = (int)Math.pow(2,arr.length);
-        for (int i = 0; i <limit ; i++) {
+        for (int i = 0; i <limit ; i++) { //loop through all the possible subsets
             String set = "";
             int temp =i;
             for (int j = arr.length-1; j >=0  ; j--) {
@@ -32,7 +32,7 @@ public class ArraySubset {
             }
             System.out.println(set);
         }
-        return -1;
+        return  0;
     }
     
 }

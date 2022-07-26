@@ -1,0 +1,1 @@
+{"name":"Local: cumulativesum","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\Array\\cumulativesum.cpp","tests":[{"id":1658750550016,"input":"3\n1 4 1\n3\n1 1\n1 2\n0 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\Array\\cumulativesum.cpp","group":"local","local":true}
