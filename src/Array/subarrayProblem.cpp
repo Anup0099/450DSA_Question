@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-
+//same function calling inside the function function calls are also called recursion. kahi to rukna hoga znindgi bhar nahi chal sakte hai is called base case.
 int subarraySum(vector<int> &arr, int n, int k)
 {
     int prefix[n];

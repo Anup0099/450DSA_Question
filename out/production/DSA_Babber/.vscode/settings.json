@@ -21,7 +21,8 @@
         "Linkedlist",
         "Graph",
         "Bitmanupulation",
+        "BinarySearchTree",
         "Binary",
-        "BinarySearchTree"
+        "Recursion"
     ]
 }
