@@ -31,7 +31,34 @@ public:
         return head;
     }
 }; 
+class Solution {
+public:
+
+    ListNode* reverseList(ListNode* &head) {
+
+        if (head == NULL||head->next==NULL)
+            return head;
+
+        ListNode* nnode = reverseList(head->next);
+        head->next->next = head;
+        head->next = NULL;
+        return nnode;
+    }
+};
 int main() {
+    ListNode* head = new ListNode(1);
+    head->next = new ListNode(2);
+    head->next->next = new ListNode(3);
+    head->next->next->next = new ListNode(4);
+    head->next->next->next->next = new ListNode(5);
+    Solution s;
+    ListNode* head_new = s.reverseList(head);
+    while(head_new) {
+        cout<<head_new->val<<" ";
+        head_new = head_new->next;
+    }
+    cout<<endl;
+    return 0;
 
 
 } 
