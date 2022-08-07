@@ -3,6 +3,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch nextGreaterElement",
+            "request": "launch",
+            "mainClass": "nextGreaterElement",
+            "projectName": "src_f9c7f5ec"
+        },
+        {
+            "type": "java",
             "name": "Launch factorial",
             "request": "launch",
             "mainClass": "factorial",

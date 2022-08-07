@@ -35,3 +35,8 @@ bool loopInList(node *head){
     }
     return false;
 }
+
+
+int main(){
+    
+}
