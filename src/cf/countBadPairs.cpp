@@ -7,7 +7,7 @@ using namespace std;
 long long countBadPairs(vector<int> &nums)
 {
     long long ans = 0;
-   
+
     for (int i = 0; i < nums.size(); i++)
     {
         for (int j = i + 1; j < nums.size(); j++)
@@ -20,4 +20,21 @@ long long countBadPairs(vector<int> &nums)
     }
     return ans;
 }
-int main() {}
+long long badpairs(vector<int> &nums)
+{
+    int n = nums.size();
+    map<long long, long long> m;
+    for (int i = 0; i < nums.size(); i++)
+    {
+        m[nums[i] - i]++;
+    }
+    long long ans = (long long)n * ((long long)n - 1) / 2;
+    for (auto it : m)
+    {
+        ans -= it.second * (it.second - 1) / 2;
+    }
+    return ans;
+}
+int main()
+{
+}

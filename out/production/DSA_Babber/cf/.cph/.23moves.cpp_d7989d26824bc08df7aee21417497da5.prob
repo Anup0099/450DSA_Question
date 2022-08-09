@@ -1,0 +1,1 @@
+{"name":"Local: 23moves","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\cf\\23moves.cpp","tests":[{"id":1659625064791,"input":"4\n1\n3\n-5\n12","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\cf\\23moves.cpp","group":"local","local":true}

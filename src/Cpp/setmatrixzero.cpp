@@ -58,5 +58,15 @@ void setZero(vector<vector<int>>&matrix){
 }
 
 int main(){
-
+    vector<vector<int>>matrix={{1,1,1},{1,0,1},{1,1,1}};
+    setZero(matrix);
+    for (size_t i = 0; i < matrix.size(); i++)
+    {
+        for (size_t j = 0; j < matrix[0].size(); j++)
+        {
+            cout<<matrix[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+    return 0;
 }

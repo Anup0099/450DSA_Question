@@ -8,7 +8,7 @@ struct node
     {
         data = x;
         next = NULL;
-    }
+    } 
 };
 //delete with a random pointer not with root
 void deleteNode(node *pointer)

@@ -13,7 +13,9 @@
         "ostream": "cpp",
         "deque": "cpp",
         "vector": "cpp",
-        "*.tcc": "cpp"
+        "*.tcc": "cpp",
+        "chrono": "cpp",
+        "algorithm": "cpp"
     },
     "java.project.sourcePaths": [
         "string",
