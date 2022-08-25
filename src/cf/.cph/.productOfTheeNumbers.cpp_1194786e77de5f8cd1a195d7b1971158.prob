@@ -1,0 +1,1 @@
+{"name":"Local: productOfTheeNumbers","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\cf\\productOfTheeNumbers.cpp","tests":[{"id":1661085321114,"input":"5\n64\n32\n97\n2\n12345","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\cf\\productOfTheeNumbers.cpp","group":"local","local":true}

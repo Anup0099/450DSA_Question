@@ -2,7 +2,7 @@
 using namespace std;
 
 struct node
-{  
+{
     int data;
     node *next;
     node(int data)
@@ -10,41 +10,50 @@ struct node
         data = data;
         next = NULL;
     }
-
 };
 
-node *segregate(node *head){
-    node *evenStart=NULL,*evenEnd=NULL,*oddStart=NULL,*oddEnd=NULL;
-    for(node *curr=head;curr!=NULL;curr=curr->next){
-    int x =curr->data;
-        if(x%2==0){
-            if(evenStart==NULL){
-                evenStart=curr;
-                evenEnd=curr;
+node *segregate(node *head)
+{
+    node *evenStart = NULL, *evenEnd = NULL, *oddStart = NULL, *oddEnd = NULL;
+    for (node *curr = head; curr != NULL; curr = curr->next)
+    {
+        int x = curr->data;
+        if (x % 2 == 0)
+        {
+            if (evenStart == NULL)
+            {
+                evenStart = curr;
+                evenEnd = curr;
             }
-            else{
-                evenEnd->next=curr;
-                evenEnd=curr;
+            else
+            {
+                evenEnd->next = curr;
+                evenEnd = curr;
             }
-        }else{
-            if(oddStart==NULL){
-                oddStart=curr;
-                oddEnd=curr;
+        }
+        else
+        {
+            if (oddStart == NULL)
+            {
+                oddStart = curr;
+                oddEnd = curr;
             }
-            else{
-                oddEnd->next=curr;
-                oddEnd=curr;
+            else
+            {
+                oddEnd->next = curr;
+                oddEnd = curr;
             }
         }
     }
-    if(evenStart==NULL || oddStart==NULL){
+    if (evenStart == NULL || oddStart == NULL)
+    {
         return head;
     }
-    evenEnd->next=oddStart;
-    oddEnd->next=NULL;
+    evenEnd->next = oddStart;
+    oddEnd->next = NULL;
     return evenStart;
 }
 
-int main(){
-    
+int main()
+{
 }

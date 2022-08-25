@@ -14,13 +14,15 @@ struct node
 
 void printlist(node *head)
 {
-    node* temp = head;
- 
+    node *temp = head;
+
     // If linked list is not empty
-    if (head != NULL) {
- 
+    if (head != NULL)
+    {
+
         // Print nodes till we reach first node again
-        do {
+        do
+        {
             cout << temp->data << " ";
             temp = temp->next;
         } while (temp != head);
@@ -32,7 +34,7 @@ void push(node **head_ref, int data)
     node *temp = *head_ref;
     ptr1->data = data;
     ptr1->next = *head_ref;
- 
+
     /* If linked list is not NULL then
     set the next of last node */
     if (*head_ref != NULL)
@@ -43,24 +45,39 @@ void push(node **head_ref, int data)
     }
     else
         ptr1->next = ptr1; /*For the first node */
- 
+
     *head_ref = ptr1;
+}
+
+node *insert(node *head, int x)
+{
+    node *temp = new node(x);
+    if (head == NULL)
+    {
+        temp->next = temp; 
+    }else{
+        node *curr=head;
+        while (curr->next != head){
+            curr = curr->next;
+        }
+        curr->next = temp;
+        temp->next = head;
+    }
+    return temp;
 }
 
 int main()
 {
     node *head = NULL;
- 
+
     /* Created linked list will be 11->2->56->12 */
     push(&head, 12);
     push(&head, 56);
     push(&head, 2);
     push(&head, 11);
- 
+
     cout << "Contents of Circular Linked List\n ";
     printlist(head);
- 
-    return 0;
 
-    
+    return 0;
 }

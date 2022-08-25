@@ -44,6 +44,7 @@ public:
         head->next = NULL;
         return nnode;
     }
+    
 };
 int main() {
     ListNode* head = new ListNode(1);

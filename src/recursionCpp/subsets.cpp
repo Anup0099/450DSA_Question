@@ -22,4 +22,13 @@ vector<vector<int>> subsets(vector<int> &A)
     sort(res.begin(), res.end());
     return res;
 }
-int main() {}
+int main() {
+    vector<int> A = {1, 2, 3};
+    vector<vector<int>> res = subsets(A);
+    for (auto x : res)
+    {
+        for (auto y : x)
+            cout << y << " ";
+        cout << endl;
+    }
+}
