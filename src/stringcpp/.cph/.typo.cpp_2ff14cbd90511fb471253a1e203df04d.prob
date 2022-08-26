@@ -1,0 +1,1 @@
+{"name":"Local: typo","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\stringcpp\\typo.cpp","tests":[{"id":1661517546585,"input":"abc\nacb","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\stringcpp\\typo.cpp","group":"local","local":true}

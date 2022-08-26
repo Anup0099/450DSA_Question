@@ -87,5 +87,6 @@
         "BinarySearchTree",
         "Binary",
         "stackCpp"
-    ]
+    ],
+    "C_Cpp.errorSquiggles": "Disabled"
 }
