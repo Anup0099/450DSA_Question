@@ -1,0 +1,1 @@
+{"name":"Local: nextSmallerElement","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\stackCpp\\nextSmallerElement.cpp","tests":[{"id":1661574674434,"input":"5\n5 2 7 6 7","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\stackCpp\\nextSmallerElement.cpp","group":"local","local":true}

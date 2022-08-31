@@ -1,0 +1,1 @@
+{"name":"Local: sortingtheSentence","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\stringcpp\\sortingtheSentence.cpp","tests":[{"id":1661582323349,"input":"\"Myself2 Me1 I4 and3\"","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\stringcpp\\sortingtheSentence.cpp","group":"local","local":true}
