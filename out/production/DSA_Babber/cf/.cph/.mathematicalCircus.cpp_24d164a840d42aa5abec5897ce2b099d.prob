@@ -1,0 +1,1 @@
+{"name":"Local: mathematicalCircus","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\cf\\mathematicalCircus.cpp","tests":[{"id":1660711042567,"input":"4\n4 1\n2 0\n12 10\n14 11","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\cf\\mathematicalCircus.cpp","group":"local","local":true}

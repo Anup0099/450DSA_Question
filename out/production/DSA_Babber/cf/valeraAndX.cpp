@@ -22,18 +22,32 @@ int main()
         {
             char diagonal = arr[0][0];
             char match = arr[0][1];
+            // then x will not form in matrix
+
             if (diagonal == match)
             {
                 flag = 1;
                 break;
             }
-            if (arr[i][j] != diagonal)
+            if (arr[i][j] != diagonal && arr[i][j] != match)
+            {
+                flag = 1;
+                break;
+            }
+
+            if (arr[i][i] != diagonal)
+            {
+                flag = 1;
+                break;
+            }
+            if (arr[i][j] == diagonal)
             {
                 diag_count++;
             }
             int m = i;
-            if(arr[m][j] !=diagonal){
-                flag=1;
+            if (arr[m][j] != diagonal)
+            {
+                flag = 1;
                 break;
             }
         }
@@ -43,8 +57,15 @@ int main()
     {
         cout << "NO";
     }
-    else
+    else if (flag == 0)
     {
-        cout << "YES";
+        if (diag_count != (n * 2) - 1)
+        {
+            cout << "NO";
+        }
+        else
+        {
+            cout << "YES";
+        }
     }
 }

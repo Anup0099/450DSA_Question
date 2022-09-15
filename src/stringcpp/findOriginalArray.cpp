@@ -38,17 +38,40 @@ vector<int> findOriginalArray(vector<int> &changed)
             return {};
         }
     }
-    for(auto i : mp){
-       cout<<i.first<<" "<<i.second<<endl;
+    for (auto i : mp)
+    {
+        cout << i.first << " " << i.second << endl;
     }
 
+    return ans;
+}
+vector<int> original(vector<int> changed)
+{
+    vector<int> v;
+    queue<int> q;
+    sort(changed.begin(), changed.end());
+    for (auto i : changed)
+    {
+        if (!q.empty() && i == q.front())
+        {
+            q.pop();
+        }
+        else
+        {
+            q.push(i * 2);
 
-return ans;
+            v.push_back(i);
+        }
+    }
+    if (q.empty())
+        return v;
+    else
+        return {};
 }
 int main()
 {
     vector<int> changed = {1, 3, 4, 2, 6, 8};
-    vector<int> ans = findOriginalArray(changed);
+    vector<int> ans = original(changed);
     for (auto i : ans)
     {
         cout << i << " ";

@@ -1,0 +1,1 @@
+{"name":"Local: equalDistinct","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\BinaryTree\\equalDistinct.cpp","tests":[{"id":1662105809610,"input":"3\n2\n1 2\n3\n1 2 3\n4\n3 1 1 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\BinaryTree\\equalDistinct.cpp","group":"local","local":true}

@@ -3,7 +3,8 @@ using namespace std;
 
 string longestNiceSubstring(string s)
 {
-    if(s.size()<2)return "";
+    if (s.size() < 2)
+        return "";
     unordered_set<int> set;
     for (int i = 0; i < s.size(); i++)
     {
@@ -11,20 +12,20 @@ string longestNiceSubstring(string s)
     }
     for (int i = 0; i < s.size(); i++)
     {
-        if(set.count(tolower(s[i]))==true && set.count(toupper(s[i]))==true){
+        if (set.count(tolower(s[i])) == true && set.count(toupper(s[i])) == true)
+        {
             continue;
         }
-        string prev = longestNiceSubstring(s.substr(0,i));
-        string next =longestNiceSubstring(s.substr(i+1));
-        return prev.size()>=next.size()?prev:next;
+        string prev = longestNiceSubstring(s.substr(0, i));
+        string next = longestNiceSubstring(s.substr(i + 1));
+        return prev.size() >= next.size() ? prev : next;
     }
     return s;
-    
 }
 
-
-int main(){
+int main()
+{
     string s = "abcd";
-    cout<<longestNiceSubstring(s)<<endl;
+    cout << longestNiceSubstring(s) << endl;
     return 0;
 }
