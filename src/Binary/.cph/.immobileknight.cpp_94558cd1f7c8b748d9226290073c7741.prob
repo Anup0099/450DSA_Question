@@ -1,0 +1,1 @@
+{"name":"Local: immobileknight","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\Binary\\immobileknight.cpp","tests":[{"id":1664463538723,"input":"3\n4\n1 0 2 5\n3\n2 6 3\n5\n0 0 0 0 0","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\Binary\\immobileknight.cpp","group":"local","local":true}

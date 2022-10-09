@@ -4,6 +4,7 @@ using namespace std;
 void printF(int ind, vector<int> &vec, int arr[], int n)
 {
     if (ind == n)
+
     {
         for (auto it : vec)
         {
@@ -14,6 +15,7 @@ void printF(int ind, vector<int> &vec, int arr[], int n)
             cout << "{}";
         }
         cout << endl;
+        return;
     }
     printF(ind + 1, vec, arr, n);
     vec.push_back(arr[ind]);
@@ -23,15 +25,11 @@ void printF(int ind, vector<int> &vec, int arr[], int n)
 
 int main()
 {
-   
-    int n;
-    cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
+
+    int arr[] = {3, 1, 2};
+    int n = 3;
+
     vector<int> vec;
     printF(0, vec, arr, n);
-    return 0;        
+    return 0;
 }
