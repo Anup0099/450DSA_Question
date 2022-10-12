@@ -11,19 +11,23 @@ using namespace std;
 // Return the id of the employee that worked the task with the longest time. If there is a tie between two or more employees, return the smallest id among them.
 int hardestWorker(int n, vector<vector<int>> &logs)
 {
-    vector<int>arr(n, 0);
-    for (int i = 0; i < logs.size(); i++)
+    int id = logs[0][0];
+    int work = logs[0][1];
+    int len = logs.size();
+    for (int i = 1; i < len; i++)
     {
-        arr[logs[i][0]] += logs[i][1];
-    }
-    int max = 0;
-    int id = 0;
-    for (int i = 0; i < n; i++)
-    {
-        if (arr[i] > max)
+        int diff = logs[i][1] - logs[i - 1][1];
+        if (logs[i][1] - logs[i - 1][1] > work)
         {
-            max = arr[i];
-            id = i;
+            id = logs[i][0];
+            work = diff;
+        }
+        else if (diff == work)
+        {
+           if(id>logs[i][0]){
+                id=logs[i][0];
+           }
+           work = diff;
         }
     }
     return id;
