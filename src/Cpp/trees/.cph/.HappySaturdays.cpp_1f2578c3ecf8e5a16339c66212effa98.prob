@@ -1,0 +1,1 @@
+{"name":"Local: HappySaturdays","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\Cpp\\trees\\HappySaturdays.cpp","tests":[{"id":1665840181914,"input":"2\n5\n1 -2 3 -2 4\n3\n1 0 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\Cpp\\trees\\HappySaturdays.cpp","group":"local","local":true}
