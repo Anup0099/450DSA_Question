@@ -10,7 +10,6 @@ int fround(float x)
 
 // Function to calculate parameters of Basic COCOMO
 void calculate(float table[][4], int n,char mode[][15], int size)
-{
 	float effort,time,staff;
 
 	int model;

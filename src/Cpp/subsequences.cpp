@@ -20,9 +20,9 @@ void printF(int ind, vector<int> &vec, int arr[], int n)
     printF(ind + 1, vec, arr, n);
     vec.push_back(arr[ind]);
     printF(ind + 1, vec, arr, n);
-    vec.pop_back();
+     vec.pop_back();
 }
-
+// first step convert into index problem whenever you see there is an arrray checj if i==n s==sum then push into ds and print it
 int main()
 {
 
