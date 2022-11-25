@@ -1,0 +1,1 @@
+{"name":"Local: goodBinaryStrings","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\goodBinaryStrings.cpp","tests":[{"id":1669216412542,"input":"2\n10100\n11111","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\goodBinaryStrings.cpp","group":"local","local":true}

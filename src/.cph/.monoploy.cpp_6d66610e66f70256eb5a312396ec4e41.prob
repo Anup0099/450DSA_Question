@@ -1,0 +1,1 @@
+{"name":"Local: monoploy","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\monoploy.cpp","tests":[{"id":1669214528138,"input":"4\n1 1 1\n1 2 4\n2 10 3\n1 2 3","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\monoploy.cpp","group":"local","local":true}
