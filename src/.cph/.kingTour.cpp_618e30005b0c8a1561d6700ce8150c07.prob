@@ -1,0 +1,1 @@
+{"name":"Local: kingTour","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\kingTour.cpp","tests":[{"id":1669820156989,"input":"4\n4 8\n2 13\n14 5\n8 8","output":"76\n101\n105\n96"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\kingTour.cpp","group":"local","local":true}
