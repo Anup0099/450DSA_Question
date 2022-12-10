@@ -41,20 +41,23 @@ int maxProduct(TreeNode *root)
     return maxp % (int)(1e9 + 7);
 }
 vector<int> rightSideView(TreeNode *root)
-{   vector<int> ans;
-    if(root == nullptr)
+{
+    vector<int> ans;
+    if (root == nullptr)
         return {};
-    queue<TreeNode*> q;
+    queue<TreeNode *> q;
     q.push(root);
-    while(!q.empty()){
+    while (!q.empty())
+    {
         int n = q.size();
-        TreeNode* temp=nullptr;
-        for(int i=0;i<n;i++){
+        TreeNode *temp = nullptr;
+        for (int i = 0; i < n; i++)
+        {
             temp = q.front();
             q.pop();
-            if(temp->left)
+            if (temp->left)
                 q.push(temp->left);
-            if(temp->right)
+            if (temp->right)
                 q.push(temp->right);
         }
         ans.push_back(temp->val);
