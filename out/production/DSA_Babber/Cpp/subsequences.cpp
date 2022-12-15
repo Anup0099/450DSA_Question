@@ -4,6 +4,7 @@ using namespace std;
 void printF(int ind, vector<int> &vec, int arr[], int n)
 {
     if (ind == n)
+
     {
         for (auto it : vec)
         {
@@ -14,24 +15,21 @@ void printF(int ind, vector<int> &vec, int arr[], int n)
             cout << "{}";
         }
         cout << endl;
+        return;
     }
     printF(ind + 1, vec, arr, n);
     vec.push_back(arr[ind]);
     printF(ind + 1, vec, arr, n);
-    vec.pop_back();
+     vec.pop_back();
 }
-
+// first step convert into index problem whenever you see there is an arrray checj if i==n s==sum then push into ds and print it
 int main()
 {
-   
-    int n;
-    cin >> n;
-    int arr[n];
-    for (int i = 0; i < n; i++)
-    {
-        cin >> arr[i];
-    }
+
+    int arr[] = {3, 1, 2};
+    int n = 3;
+
     vector<int> vec;
     printF(0, vec, arr, n);
-    return 0;        
+    return 0;
 }

@@ -1,0 +1,1 @@
+{"name":"Local: ScaleneTriangle","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\Cpp\\ScaleneTriangle.cpp","tests":[{"id":1671035664126,"input":"4\n2 3 4\n1 2 2\n2 2 2\n3 5 6","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\Cpp\\ScaleneTriangle.cpp","group":"local","local":true}

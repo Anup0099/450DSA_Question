@@ -10,7 +10,7 @@ void peermute(string s,int i=0){
         swap(s[i],s[j]);
         // cout<<s<<endl;
         peermute(s,i+1);
-        // cout<<s<<endl;
+        // cout<<s<<endl; 
         swap(s[i],s[j]);
     }
 }

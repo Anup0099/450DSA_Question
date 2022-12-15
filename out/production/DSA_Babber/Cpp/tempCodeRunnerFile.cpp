@@ -1,1 +1,1 @@
-  int sum =0;
+vec.push_back(arr[ind]);
