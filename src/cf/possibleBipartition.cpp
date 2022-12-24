@@ -23,6 +23,38 @@ bool isBipartite(vector<vector<int>> &adj, int N, int node, vector<int> &color)
     }
     return true;
 }
+bool possibleBipartition(int N, vector<vector<int>> &dislikes)
+{
+    set<int> s;
+    set<int> s2;
+    for (int i = 0; i < dislikes.size(); i++)
+    {
+        s.insert(dislikes[i][0]);
+        s.insert(dislikes[i][1]);
+    }
+    for (int i = 0; i < dislikes.size(); i++)
+    {
+        if (s.find(dislikes[i][0]) != s.end() && s.find(dislikes[i][1]) != s.end())
+        {
+            s2.insert(dislikes[i][0]);
+            s2.insert(dislikes[i][1]);
+        }
+    }
+    if (s2.size() == 0)
+        return true;
+    vector<vector<int>> adj(N + 1);
+    for (int i = 0; i < dislikes.size(); ++i)
+    {
+        adj[dislikes[i][0]].push_back(dislikes[i][1]);
+        adj[dislikes[i][1]].push_back(dislikes[i][0]);
+    }
+    vector<int> color(N + 1, -1);
+    for (int i = 1; i <= N; ++i)
+        if (color[i] == -1)
+            if (!isBipartite(adj, N, i, color))
+                return false;
+    return true; 
+}
 
 public:
 bool possibleBipartition(int N, vector<vector<int>> &dislikes)

@@ -21,18 +21,33 @@ public class BlockTowers {
 //    For each testcase, print the largest amount of blocks you can have on the tower 1 after you make any number of moves (possibly, zero).
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-        int t = sc.nextInt();
+        Scanner s=new Scanner(System.in);
 
-        while(t-->0){
-            int n=sc.nextInt();
-            int []arr=new int[n];
-            for (int i = 0; i <n ; i++) {
-                arr[i]=sc.nextInt();
-            }
+        int n=s.nextInt();
+        int m=s.nextInt();
+
+        int ar[]=new int[n];
+        int br[]=new int[m];
+
+        for(int i=0;i<n;i++)
+            ar[i]=s.nextInt();
+        for(int i=0;i<m;i++)
+            br[i]=s.nextInt();
+
+        Arrays.sort(ar);
+        Arrays.sort(br);
+
+        int tmin=Integer.max(ar[0]*2,ar[n-1]);
+
+        if(br[0]<=tmin)
+            System.out.println(-1);
+        else
+            System.out.println(tmin);
+
+        s.close();
 
 
         }
 
     }
-}
+

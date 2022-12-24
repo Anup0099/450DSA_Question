@@ -10,7 +10,7 @@ using namespace std;
 // The distance between two characters S_iS
 // i
 // ​
-//   and S_jS
+//   and S_jSdddd
 // j
 // ​
 //   is defined as abs(i-j)abs(i−j).
@@ -31,24 +31,31 @@ int main()
     {
         int n;
         cin >> n;
-        string s;
-        cin >> s;
-        int count = 0;
-        int min = INT_MAX;
+        string si;
+        cin >> si;
+        int count = 0, ans = 0, index = 0;
         for (int i = 0; i < n; i++)
         {
-            if (s[i] == '1')
+            if (si[i] == '1')
             {
                 count++;
                 if (count == 2)
                 {
-                    if (min > i)
-                    {
-                        min = i;
-                    }
+                    ans = abs(index - i);
+                    count--;
+                    if (ans % 2 != 0)
+                        break;
+                }
+                if (count == 1)
+                {
+                    index = i;
                 }
             }
         }
-        cout << min << endl;
+        if (ans % 2 == 0)
+            cout << "2" << endl;
+        else
+            cout << "1" << endl;
     }
+    return 0;
 }

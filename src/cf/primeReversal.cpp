@@ -1,5 +1,5 @@
-#include <bits/stdc++.h> 
-using namespace std; 
+#include <bits/stdc++.h>
+using namespace std;
 // You are given two binary strings AA and BB, each of length NN. You can perform the following operation on string AA any number of times:
 
 // Select a prime number XX.
@@ -18,26 +18,51 @@ using namespace std;
 // For each test case, output on a new line, YES, if you can make the string AA equal to BB using any number of operations and NO otherwise.
 
 // You can print each character in uppercase or lowercase. For example, YES, yes, Yes, and yES are all identical.
-int main() {
-    int t;cin>>t;
-    while(t--){
-        int n;cin>>n;
-        string a,b;
-        cin>>a>>b;
-        int count=0;
-        for(int i=0;i<n;i++){
-            if(a[i]!=b[i]){
-                count++;
+int main()
+{
+    int t;
+    cin >> t;
+    while (t--)
+    {
+        int n;
+        cin >> n;
+        string a, b;
+        cin >> a >> b;
+        int count1 = 0;
+        int count2 = 0;
+        int count3 = 0;
+        int count4 = 0;
+
+        for (int i = 0; i < a.length(); i++)
+        {
+            if (a[i] == '1')
+            {
+                count1++;
+            }
+            else
+            {
+                count2++;
             }
         }
-        if(count==0){
-            cout<<"YES"<<endl;
+        for (int i = 0; i < b.length(); i++)
+        {
+            if (b[i] == '1')
+            {
+                count3++;
+            }
+            else
+            {
+                count4++;
+            }
         }
-        else if(count==2){
-            cout<<"YES"<<endl;
+
+        if (count1 == count3 && count2 == count4)
+        {
+            cout << "YES" << endl;
         }
-        else{
-            cout<<"NO"<<endl;
+        else
+        {
+            cout << "NO" << endl;
         }
     }
-} 
+}
