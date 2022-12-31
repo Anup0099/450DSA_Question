@@ -1,75 +1,79 @@
-#include <bits/stdc++.h>
+#include<iostream>
+#include<map>
 using namespace std;
-// Consider an array AA consisting of NN positive elements. The frequency array of AA is the array BB of size NN such that B_i =B
-// i
-// ​
-//  = frequency of element A_iA
-// i
-// ​
-//   in AA.
 
-// For example, if A = [4, 7, 4, 11, 2, 7, 7]A=[4,7,4,11,2,7,7], the frequency array B = [2, 3, 2, 1, 1, 3, 3]B=[2,3,2,1,1,3,3].
+void solveCase() {
 
-// You have lost the array AA, but fortunately you have the array BB.
-// Your task is to construct the lexicographically smallest array AA such that:
+    int n;
+    cin >> n;
 
-// 1\le A_i \le 10^51≤A
-// i
-// ​
-//  ≤10
-// 5
-//  ;
-// The frequency array of AA is equal to BB.
-// If no such array AA exists, print -1−1.
+    int arr[n];
+    for(int i=0; i<n; i++){
+        cin >> arr[i];
+    }
 
-// Note: Array XX is lexicographically smaller than array YY, if X_i \lt Y_iX
-// i
-// ​
-//  <Y
-// i
-// ​
-//  , where ii is the first index where XX and YY differ.
+    // Maintaining a Freq map for every element in arr
+    map<int, int> frequency;
+    for(int i=0; i<n; i++) {
+        if(!frequency.count(arr[i])){
+            frequency[arr[i]] = 1;
+        }
+        else {
+            frequency[arr[i]]++;
+        }
+    }
 
-// Input Format
-// The first line of input will contain a single integer TT, denoting the number of test cases.
-// Each test case consists of two lines of input.
-// The first line of each test case contains a single integer NN — the size of the array.
-// The next line contains NN space-separated integers - B_1, B_2, \ldots, B_NB
-// 1
-// ​
-//  ,B
-// 2
-// ​
-//  ,…,B
-// N
-// ​
-//  , the frequency array.
-// Output Format
-// For each test case, output on a new line, NN space separated integers - A_1, A_2, \ldots, A_NA
-// 1
-// ​
-//  ,A
-// 2
-// ​
-//  ,…,A
-// N
-// ​
-//  , the lexicographically smallest array AA. If no such array AA exists, print -1−1.
-int main()
-{
+    // For a valid Solution to exist frequency[x] must be multiple of x
+    // if not we print -1 & return
+    for(auto i : frequency){
+        if(i.second%i.first != 0){
+            cout << "-1" << endl;
+            return;
+        }
+    }
+
+    // Make a curr map for storing count of every x placed and intialize every value to 0
+    map<int, int> curr;
+    for(auto i : frequency){
+        curr[i.first] = 0;
+    }
+
+    // Make a map mp to store which x is mapped to which element to place & intialize it to -1
+    map<int, int> mp;
+    for(auto i : frequency){
+        mp[i.first] = -1;
+    }
+
+    // Now We start placing elements from 1 coz we have to make A lexicographically smallest
+    int nxt = 1;
+    for(int i=0; i<n; i++){
+
+        // if arr[i] is not mapped to any element previously
+        if(mp[arr[i]] == -1){
+            mp[arr[i]] = nxt++;
+        }
+        else if(curr[arr[i]] == arr[i]){ // if curr[arr[i]] reached max frequency of it i.e. arr[i]
+            mp[arr[i]] = nxt++;
+            curr[arr[i]] = 0;
+        }
+
+        // output the mapped value after processing
+        cout << mp[arr[i]] << " ";
+
+        // As 1 mapped value placed increment its count
+        curr[arr[i]]++;
+    }
+    cout << endl;
+}
+
+int main() {
+
     int t;
     cin >> t;
-    while (t--)
-    {
-        int n;
-        cin >> n;
-        int a[n];
-        for (int i = 0; i < n; i++)
-            cin >> a[i];
 
-        sort(a, a + n);
-        for
-
-       
+    while(t--){
+        solveCase();
     }
+
+    return 0;
 }

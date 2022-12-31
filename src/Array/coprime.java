@@ -8,7 +8,24 @@ public class coprime {
         if(a==0)return b;
         return gcd(b%a,a);
     }
+        public static String getHint(String secret, String guess) {
+            int bulls=0,cows=0;
+            int []arr=new int[10];
+            for (int i = 0; i < secret.length (); i++) {
+                int s=Character.getNumericValue(secret.charAt(i));
+                int g=Character.getNumericValue(secret.charAt(i));
+                if(s==g)bulls++;
+                else{
+                    if(arr[s]<0)cows++;
+                    if(arr[g]>0)cows++;
+                    arr[s]++;
+                    arr[g]--;
+                }
+            }
+            return bulls+"A"+cows+"B";
 
+
+        }
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
         int test=sc.nextInt();
