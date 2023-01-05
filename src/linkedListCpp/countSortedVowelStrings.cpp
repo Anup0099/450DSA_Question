@@ -22,8 +22,27 @@ int countSortedVowels(int n)
     }
     return ans;
 }
-int main() {
-    int n = 2;
-    cout << countSortedVowels(n);
+int util(int n, int curr)
+{
+    if (n == 0)
+    {
+        return 1;
+    }
+    int ans = 0; 
+    for (int i = curr; i < 6; i++)
+    {
+        ans += util(n - 1, i);
+        cout<<ans<<endl;
+    }
+    return ans;
+}
+int CountVowelStrings(int n)
+{
+    return util(n, 1);
+}
+int main()
+{
+    int n = 1;
+    cout << CountVowelStrings(n);
     return 0;
 }

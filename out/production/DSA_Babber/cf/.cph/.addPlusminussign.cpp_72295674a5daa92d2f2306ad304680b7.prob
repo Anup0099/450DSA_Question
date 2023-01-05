@@ -1,0 +1,1 @@
+{"name":"Local: addPlusminussign","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\cf\\addPlusminussign.cpp","tests":[{"id":1671595239717,"input":"3\n2\n11\n5\n01101\n5\n10001\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\cf\\addPlusminussign.cpp","group":"local","local":true}

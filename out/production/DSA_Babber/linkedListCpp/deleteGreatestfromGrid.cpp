@@ -11,20 +11,26 @@ using namespace std;
 // Return the answer after performing the operations described above.
 int deleteGreatestValue(vector<vector<int>> &grid)
 {
-  //using set
-    int m = grid.size();    
-    int n = grid[0].size();
-    int ans = 0;
-    while (n > 0)
+    // sort using row by row
+    for (int i = 0; i < grid.size(); i++)
     {
-        set<int> s;
-        for (int i = 0; i < m; i++)
+        sort(grid[i].begin(), grid[i].end());
+    }
+    int ans = 0;
+    for (int i = 0; i < grid[0].size(); i++)
+    {
+        int maxi = INT_MIN;
+        for (int j = 0; j < grid.size(); j++)
         {
-            s.insert(grid[i][n - 1]);
+            maxi= max(maxi, grid[j][i]);
         }
-        ans += *s.rbegin();
-        n--;
+        ans += maxi;
     }
     return ans;
 }
-int main() {}
+int main()
+{
+    vector<vector<int>> grid = {{1,2,4},{3,3,1}};
+    cout << deleteGreatestValue(grid);
+    return 0;
+}

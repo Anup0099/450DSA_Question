@@ -1,0 +1,1 @@
+{"name":"Local: cc2","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\Cpp\\cc2.cpp","tests":[{"id":1672842714040,"input":"5\n30\n24\n3\n19\n123456","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\Cpp\\cc2.cpp","group":"local","local":true}
