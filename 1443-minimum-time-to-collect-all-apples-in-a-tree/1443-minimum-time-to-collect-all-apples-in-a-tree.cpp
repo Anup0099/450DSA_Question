@@ -19,10 +19,10 @@ pair<int, int> dfs(int node, int parent)
 int minTime(int n, vector<vector<int>> &edges, vector<bool> &hasApple)
 {
    fruit = hasApple;
-    for(int i =0;i<(int)edges.size();i++)
+    for (auto &edge : edges)
     {
-        adj[edges[i][0]].push_back(edges[i][1]);
-        adj[edges[i][1]].push_back(edges[i][0]);
+        adj[edge[0]].push_back(edge[1]);
+        adj[edge[1]].push_back(edge[0]);
     }
     
     return dfs(0, 0).first;
