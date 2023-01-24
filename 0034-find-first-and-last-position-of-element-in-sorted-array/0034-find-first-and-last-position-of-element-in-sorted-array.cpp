@@ -1,37 +1,58 @@
 class Solution {
 public:
-    vector<int> searchRange(vector<int>& nums, int target) {
-            vector<int> ans;
-    int l = 0, r = nums.size() - 1;
+    int findRightMost(vector<int> &nums, int target, int n)
+{
+    int l = 0;
+    int r = n - 1;
+    int right_most = -1;
     while (l <= r)
     {
-        int mid = (l + r) / 2;
+        int mid = l + (r - l) / 2;
         if (nums[mid] == target)
         {
-            int l1 = mid, r1 = mid;
-            while (l1 >= 0 && nums[l1] == target)
-            {
-                l1--;
-            }
-            while (r1 < nums.size() && nums[r1] == target)
-            {
-                r1++;
-            }
-            ans.push_back(l1 + 1);
-            ans.push_back(r1 - 1);
-            return ans;
+            right_most = mid; // one possible answerr
+            l = mid + 1;      // look more on the right side
         }
-        else if (nums[mid] < target)
-        {
-            l = mid + 1;
-        }
-        else
+        else if (nums[mid] > target)
         {
             r = mid - 1;
         }
+        else
+        {
+            l = mid + 1;
+        }
     }
-    ans.push_back(-1);
-    ans.push_back(-1);
-    return ans;
+    return right_most;
+}
+int findleftMost(vector<int> &nums, int target, int n)
+{
+    int l = 0;
+    int r = n - 1;
+    int left_most = -1;
+    while (l <= r)
+    {
+        int mid = l + (r - l) / 2;
+        if (nums[mid] == target)
+        {
+            left_most = mid; // possible answer
+            r = mid - 1;     // look more on left
+        }
+        else if (nums[mid] > target)
+        {
+            r = mid - 1;
+        }
+        else
+        {
+            l = mid + 1;
+        }
+    }
+    return left_most;
+}
+    vector<int> searchRange(vector<int>& nums, int target) {
+         int n = nums.size();
+
+    int left = findleftMost(nums, target, n);
+    int right = findRightMost(nums, target,  n);
+    return {left, right};
     }
 };
