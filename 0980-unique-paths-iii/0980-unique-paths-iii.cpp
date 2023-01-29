@@ -1,32 +1,49 @@
 class Solution {
 public:
-    int uniquePathsIII(vector<vector<int>>& G) {
-        int startRow, startCol, cellsToVisit = 0;
-        for(int i = 0; i < size(G); i++)
-            for(int j = 0; j < size(G[0]); j++) 
-                if(G[i][j] == 1) startRow = i, startCol = j;
-                else if(G[i][j] != -1) cellsToVisit++;
-				
-        dfs(G, startRow, startCol, cellsToVisit);
-        return ans;
-    }
-private:
-    int ans = 0, dir[5] {0, 1, 0, -1, 0};  // <- a common way to make 4-way exploration in dfs concise
-	
-	// checks if cell is valid. If none of 3 points mentioned in post is satisfied, it is a valid cell
-    bool isValidCell(vector<vector<int>>& G, int i, int j) {
-        return i >= 0 && j >= 0 && i < size(G) && j < size(G[0]) && G[i][j] != -1 && G[i][j] != 3;
-    }
-	
-    void dfs(vector<vector<int>>& G, int i, int j, int cellsToVisit) {
-        if(not isValidCell(G, i, j)) return;   // return if cell is invalid
-        if(G[i][j] == 2) {                     // reached end cell
-            if(cellsToVisit == 0) ans++;       // if all cells are visited, increment valid path count
-            return;                            // no further exploration possible after reaching end cell
+    int m,n,result,nonObstacle;
+    vector<vector<int>>directions{{1,0},{-1,0},{0,-1},{0,1}};
+    void backtrack(vector<vector<int>>&grid,int count,int i,int j){
+       if(i<0 || i>=m || j<0 || j>=n || grid[i][j]==-1){
+           return ;
+       } 
+        if(grid[i][j]==2){
+            if(count==nonObstacle){
+                result++;
+                
+            }
+            return;
         }
-        G[i][j] = 3;                           // mark cell as visited
-        for(int k = 0; k < 4; k++)             // explore path futher 4-directionally
-            dfs(G, i + dir[k], j + dir[k+1], cellsToVisit - 1);    
-        G[i][j] = 0;                           // backtrack
-    }        
+        grid[i][j]=-1;
+        for(vector<int>&dir:directions){
+            int new_i=i+dir[0];
+            int new_j=j+dir[1];
+            backtrack(grid,count+1,new_i,new_j);
+            
+        }
+        grid[i][j]=0;
+    }
+    int uniquePathsIII(vector<vector<int>>& grid) {
+        m=grid.size();
+        n=grid[0].size();
+        result=0;
+        nonObstacle=0;
+        int start_x=0,start_y=0;
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                if(grid[i][j]==0){
+                    nonObstacle++;
+                }
+                if(grid[i][j]==1){
+                    start_x=i;
+                    start_y=j;
+                    
+                    
+                }
+            }
+        }
+        nonObstacle +=1;
+        int count=0;
+        backtrack(grid,count, start_x, start_y);
+        return result;
+    }
 };
