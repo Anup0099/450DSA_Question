@@ -1,4 +1,5 @@
 #include <bits/stdc++.h>
+typedef long long ll;
 using namespace std;
 // Hossam woke up bored, so he decided to create an interesting array with his friend Hazem.
 
@@ -20,36 +21,28 @@ using namespace std;
 
 // Output
 // For each test case print an integer — the number of interesting pairs (ai,aj).
+int solve()
+{
+    int n, m, i, j;
+    cin >> n;
+    map<int, int> cnt;
+    for (i = 0; i < n; i++){
+        cin >> m;
+        ++cnt[m];
+    }
+    if (cnt.size() == 1)
+        cout << n * (n - 1ll) << '\n';
+    else
+        cout << (ll)cnt.begin()->second * cnt.rbegin()->second * 2 << '\n';
+    return 0;
+}
 int main()
 {
-    int t;
-    cin >> t;
-    while (t--)
+    long long testCase;
+    cin >> testCase;
+    while (testCase--)
     {
-        long long n;
-        cin >> n;
-        long long a[n];
-        for (long long i = 0; i < n; i++)
-        {
-            cin >> a[i];
-        }
-        map<long long, long long> m;
-        for (long long i = 0; i < n; i++)
-        {
-            m[a[i]]++;
-        }
-        sort(a, a + n);
-        for (auto it : m)
-        {
-            cout << it.first << " " << it.second << endl;
-        }
-        if (m.size() == 1)
-        {
-            cout << n * (n - 1) << endl;
-        }
-        else
-        {
-            cout << m[a[0]] * m[a[n - 1]] * 2 << endl;
-        }
+        solve();
     }
+    return 0;
 }

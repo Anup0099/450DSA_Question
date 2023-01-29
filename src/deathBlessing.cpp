@@ -1,5 +1,5 @@
-#include <bits/stdc++.h> 
-using namespace std; 
+#include <bits/stdc++.h>
+using namespace std;
 #define ll long long
 // You are playing a computer game. To pass the current level, you have to kill a big horde of monsters. In this horde, there are n monsters standing in the row, numbered from 1 to n. The i-th monster has ai health and a special "Death's Blessing" spell of strength bi attached to it.
 
@@ -10,7 +10,7 @@ using namespace std;
 // After each monster is killed, the row shrinks, so its former neighbors become adjacent to each other (so if one of them dies, the other one is affected by its spell). For example, imagine a situation with 4 monsters with health a=[2,6,7,3] and spells b=[3,6,0,5]. One of the ways to get rid of the monsters is shown below:
 
 // 2	6	7	3	−→6 s	8	13	3	−→−13 s	8	3	−→8 s	6	−→6 s	{}
-// 3	6	0	5	3	0	5	3	5	5	
+// 3	6	0	5	3	0	5	3	5	5
 // The first row represents the health of each monster, the second one — the power of the spells.
 // As a result, we can kill all monsters in 6+13+8+6 = 33 seconds. Note that it's only an example and may not be the fastest way to get rid of the monsters.
 
@@ -29,31 +29,41 @@ using namespace std;
 
 // Output
 // For each test case, print one integer — the minimum possible total time to kill all monsters.
-int main() {
-     ll t, n, ans, i, j, b_max;
-    
-    cin>>t;
-    
-    for(;t--;)
+bool comparator(pair<ll, ll> &a, pair<ll, ll> &b)
+{
+    // sort according to second element in descending order
+    return a.second < b.second;
+}
+int main()
+{
+    ll t, n, ans, i, j, b_max;
+
+    cin >> t;
+
+    while (t--)
     {
-        cin>>n;
-        b_max=0;
-        
-        ll a[n], b[n];
-        
-        for(i=0; i<n; i++)cin>>a[i];
-        
-        for(i=0; i<n; i++)cin>>b[i];
-        
-        ans=0;
-        
-        for(i=0; i<n; i++){
-            ans=ans+a[i]+b[i];
-            b_max=max(b_max, b[i]);
+        cin >> n;
+        vector<ll> a(n), b(n);
+        for (i = 0; i < n; i++)
+        {
+            cin >> a[i];
         }
-        
-        ans-=b_max;
-        
-        cout<<ans<<"\n";
+        for (i = 0; i < n; i++)
+        {
+            cin >> b[i];
+        }
+        vector<pair<ll, ll>> v;
+        for (i = 0; i < n; i++)
+        {
+            v.push_back({a[i], b[i]});
+        }
+        sort(v.begin(), v.end(), comparator);
+        ll time = 0;
+        for (i = 0; i < n; i++)
+        {
+            time += v[i].first;
+            v[i + 1].first += v[i].second;
+        }
+        cout << time << endl;
     }
-} 
+}

@@ -6,7 +6,7 @@ bool canConstruct(string ransomNote, string magazine)
         
         //store all the char of magazine so that it can be searched easily
         for(auto x: magazine){
-            m[x]++;
+            m.insert({x, m[x]+1});
         }
         
 		//iterate ransomeNote 

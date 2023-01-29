@@ -1,0 +1,1 @@
+{"name":"Local: gamingForces","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\stringcpp\\gamingForces.cpp","tests":[{"id":1674571368998,"input":"3\n4\n5 4 5 3\n3\n2 4 2\n4\n1 1 1 1 ","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\stringcpp\\gamingForces.cpp","group":"local","local":true}

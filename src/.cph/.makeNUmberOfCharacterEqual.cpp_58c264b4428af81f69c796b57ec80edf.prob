@@ -1,0 +1,1 @@
+{"name":"Local: makeNUmberOfCharacterEqual","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\makeNUmberOfCharacterEqual.cpp","tests":[{"id":1673146911911,"input":"\n\"abc\"\n\"def\"\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\makeNUmberOfCharacterEqual.cpp","group":"local","local":true}
