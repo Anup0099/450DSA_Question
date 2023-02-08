@@ -1,14 +1,24 @@
 class Solution {
 public:
-    int jump(vector<int>& nums) {
-         int n=nums.size();
-    vector<int> dp(n,INT_MAX);
-    dp[0]=0;
-    for(int i=0;i<n;i++){
-        for(int j=1;j<=nums[i]&&i+j<n;j++){
-            dp[i+j]=min(dp[i+j],dp[i]+1);
-        }
+  int solve(int ind, int minJump, vector<int> &nums, vector<int> &dp)
+{
+    if (ind >= nums.size() - 1)
+    {
+        return 0;
     }
-    return dp[n-1];
+    if (dp[ind] != -1)
+    {
+        return dp[ind];
     }
+   
+    for(int i=1;i<=nums[ind];i++){
+        minJump=min(minJump,solve(ind+i,minJump,nums,dp)+1);
+    }
+    return dp[ind]=minJump;
+}
+int jump(vector<int> &nums)
+{
+    vector<int> dp(nums.size(), -1);
+    return solve(0,100001, nums, dp);
+}
 };
