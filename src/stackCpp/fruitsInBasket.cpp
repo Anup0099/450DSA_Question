@@ -2,31 +2,61 @@
 using namespace std;
 int totalFruit(vector<int> tree)
 {
-    int i = 0, j = 0;
+    set<int> s;
+    int n = tree.size();
+    if (s.size() >= 2)
+        return n;
     int ans = 0;
-    int count = 0;
-    unordered_map<int, int> mp;
-    while (j < tree.size())
+    for (int i = 0; i < n; i++)
     {
-        mp[tree[j]]++;
-        if (mp[tree[j]] == 1)
+        for (int j = i; j < n; j++)
         {
-            count++;
-        }
-        if (count > 2)
-        {
-            while (mp[tree[i]] > 1)
+            s.insert(tree[j]);
+            if (s.size() <= 2)
             {
-                mp[tree[i]]--;
-                i++;
+                ans = max(ans, j - i + 1);
             }
-            mp[tree[i]]--;
-            i++;
-            count--;
+            else
+            {
+                break;
+            }
         }
-        ans = max(ans, j - i + 1);
-        j++;
+        s.clear();
     }
     return ans;
+}
+int totalFruit(vector<int> &fruits)
+{
+    int lastFruit = -1;
+    int secondlastFruit = -1;
+    int currentMax = 0;
+    int maxi = 0;
+    int last_fruit_count = 0;
+    for (auto nums : fruits)
+    {
+        if (nums == lastFruit || nums == secondlastFruit)
+        {
+            currentMax += 1;
+        }
+        else
+        {
+            currentMax = lastFruit + 1;
+        }
+        if (nums == lastFruit)
+        {
+            lastFruit+=1;
+        }
+        else
+        {
+            lastFruit = 1;
+        }
+        if (nums != lastFruit)
+        {
+            secondlastFruit = lastFruit;
+            lastFruit = nums;
+        }
+        maxi = max(currentMax, maxi);
+    }
+    return max;
 }
 int main() {}

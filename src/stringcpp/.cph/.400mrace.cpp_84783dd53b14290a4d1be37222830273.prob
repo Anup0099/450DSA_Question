@@ -1,0 +1,1 @@
+{"name":"Local: 400mrace","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\stringcpp\\400mrace.cpp","tests":[{"id":1675262348257,"input":"3\n1 2 8\n4 100 1\n7 3 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\stringcpp\\400mrace.cpp","group":"local","local":true}

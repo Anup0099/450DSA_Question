@@ -1,0 +1,1 @@
+{"name":"Local: lowercase","url":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\stringcpp\\lowercase.cpp","tests":[{"id":1675435303531,"input":"10\na\nb\nc\nd\ne\nf\ng\nh\ni\nj\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\Asus\\IdeaProjects\\DSA_Babber\\src\\stringcpp\\lowercase.cpp","group":"local","local":true}

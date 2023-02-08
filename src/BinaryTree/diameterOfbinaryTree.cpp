@@ -15,10 +15,9 @@ int height(node *root)
 {
     if (root == NULL)
         return 0;
-    else
-    {
-        return 1 + max(height(root->left), height(root->right));
-    }
+    int left = height(root->left);
+    int right = height(root->right);
+    return max(left, right) + 1;
 }
 
 int diameter(node *root)
@@ -38,7 +37,10 @@ int height2(node *root)
     int lh = height2(root->left);
     int rh = height2(root->right);
     res = max(res, 1 + lh + rh);
-    return max(lh, rh) + 1;
+    cout<<res<<" ";
+    
+    return 1 + max(lh, rh);
+   
 }
 int main()
 {
