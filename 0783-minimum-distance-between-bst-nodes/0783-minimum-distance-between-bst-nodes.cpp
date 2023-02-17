@@ -11,17 +11,28 @@
  */
 class Solution {
 public:
-  int res = INT_MAX,
-    pre = -1;
-int minDiffInBST(TreeNode *root)
+    TreeNode *prev = NULL;
+void solve(int &ans, TreeNode *root)
 {
-    if (root->left != NULL)
-        minDiffInBST(root->left);
-    if (pre >= 0)
-        res = min(res, root->val - pre);
-    pre = root->val;
+    if (root == NULL)
+        return;
     if (root->right != NULL)
-        return minDiffInBST(root->right);
-    return res;
+    {
+        solve(ans, root->right);
+    }
+    if (prev != NULL)
+    {
+        ans = min(ans, abs(prev->val - root->val));
+    }
+    prev = root;
+    if (root->left)
+    {
+        solve(ans, root->left);
+    }
 }
+    int minDiffInBST(TreeNode* root) {
+         int ans = INT_MAX;
+         solve(ans, root);
+        return ans;
+    }
 };
