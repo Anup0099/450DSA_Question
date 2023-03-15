@@ -11,29 +11,32 @@
  */
 class Solution {
 public:
-    bool isCompleteTree(TreeNode* root) {
-         // using bfs approach
-        queue<TreeNode *> q;
-        q.push(root);
-        bool past = false; // kya aapne past me null node dekha hai????
-        while (!q.empty())
-        {
-            TreeNode *node = q.front();
-            q.pop();
-            if (node == NULL)
-            {
-                past = true;
-            }
-            else
-            {
-                if (past == true)
-                {
-                    return false; // agar dekha hai to complete inary tree  nahi hai
-                }
-                q.push(node->left);
-                q.push(node->right);
-            }
-        }
+    int countNodes(TreeNode *root)
+{
+    if (root == NULL)
+    {
+        return 0;
+    }
+    int left = countNodes(root->left);
+    int right = countNodes(root->right);
+    return left + right + 1;
+}
+bool dfs(TreeNode *root, int i, int totalNodes)
+{
+    if (root == NULL)
+    {
         return true;
     }
+    if (i > totalNodes)
+    {
+        return false;
+    }
+    return dfs(root->left, 2 * i, totalNodes) && dfs(root->right, 2 * i + 1, totalNodes);
+}
+bool isCompleteTree(TreeNode *root)
+{
+    int totalNodes = countNodes(root);
+    int i = 1;
+    return dfs(root, i, totalNodes);
+}
 };
