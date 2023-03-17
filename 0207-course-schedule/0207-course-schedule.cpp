@@ -1,36 +1,47 @@
 class Solution {
 public:
-    bool canFinish(int numCourses, vector<vector<int>>& prerequisites) {
-         vector<vector<int>> graph(numCourses);
-    vector<int> indegree(numCourses, 0);
-    for (auto pre : prerequisites)
-    {
-        graph[pre[1]].push_back(pre[0]);
-        indegree[pre[0]]++;
-    }
+    bool toposort(unordered_map<int, vector<int>> adj, int n, vector<int> indegree)
+{
     queue<int> q;
-    for (int i = 0; i < numCourses; i++)
+    int count = 0;
+    for (int i = 0; i < n; i++)
     {
         if (indegree[i] == 0)
         {
             q.push(i);
+            count++;
         }
     }
-    int count = 0;
     while (!q.empty())
     {
-        int curr = q.front();
+        int u = q.front();
         q.pop();
-        count++;
-        for (auto it : graph[curr])
+        for (int &v : adj[u])
         {
-            indegree[it]--;
-            if (indegree[it] == 0)
+            indegree[v]--;
+            if (indegree[v] == 0)
             {
-                q.push(it);
+                count++;
+                q.push(v);
             }
         }
     }
-    return count == numCourses;
+    if (count == n)
+        return true;
+    return false;
+}
+bool canFinish(int numCourses, vector<vector<int>> &prerequisites)
+{
+    unordered_map<int, vector<int>> adj;
+    vector<int> indegree(numCourses, 0);
+
+    for (auto vec : prerequisites)
+    {
+        int a = vec[0];
+        int b = vec[1];
+        adj[b].push_back(a);
+        indegree[a]++;
     }
+    return toposort(adj, numCourses, indegree);
+}
 };
