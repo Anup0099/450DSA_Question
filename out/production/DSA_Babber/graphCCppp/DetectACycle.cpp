@@ -7,7 +7,7 @@ void addEdge(vector<int> adj[], int u, int v)
 }
 bool DfsRec(vector<int>aadj[],int s,bool visited[],int parent){
     visited[s]=true;
-    for(auto u:aadj[s]){
+    for(auto u:adj[s]){
        if(DfsRec(aadj,u,visited,s)==true){
               return true;
        }else if(u!=parent){

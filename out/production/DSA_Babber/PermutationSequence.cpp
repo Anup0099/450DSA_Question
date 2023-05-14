@@ -21,4 +21,6 @@ string getPermutation(int n,int k){
     }
     return ans;
 } 
-int main() {} 
+int main() {
+    
+} 
