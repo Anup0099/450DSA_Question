@@ -12,6 +12,7 @@ public:
         }
         else if (s[i] == ')')
             ans--;
+        cout<<depth<<endl;
         depth = max(ans, depth);
     }
     return depth;
