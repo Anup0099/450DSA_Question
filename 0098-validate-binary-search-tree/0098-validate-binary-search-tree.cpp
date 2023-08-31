@@ -11,24 +11,31 @@
  */
 class Solution {
 public:
-    bool solve(TreeNode *root, long long  min, long long max)
+    vector<int> inorder(TreeNode *root, vector<int> &ans)
 {
     if (root == NULL)
-        return true;
-    if (root->val > min and root->val < max)
-    {
-
-        bool left= solve(root->left,min,root->val);
-        bool right = solve(root->right,root->val,max);
-        return right && left;
-    }else{
-        return false;
-    }
-    
+        return ans;
+    inorder(root->left, ans);
+    ans.push_back(root->val);
+    inorder(root->right, ans);
+    return ans;
 }
-bool isValidBST(TreeNode *root)
+   bool isValidBST(TreeNode *root)
 {
+    vector<int> ans;
+    ans = inorder(root, ans);
 
-    return solve(root, LONG_MIN, LONG_MAX);
+    for (int i = 0; i < ans.size()-1; i++)
+    {
+        if (ans[i] >= ans[i + 1])
+        {
+            return false;
+        }
+    }
+       for(auto it:ans)
+       {
+           cout<<it;
+       }
+    return true;
 }
 };
