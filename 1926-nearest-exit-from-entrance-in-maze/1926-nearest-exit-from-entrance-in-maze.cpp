@@ -1,40 +1,44 @@
 class Solution {
 public:
-    vector<vector<int>> directions{{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
+    vector<vector<int>> directions  {{0, 1}, {0, -1}, {1, 0}, {-1, 0}};
     int nearestExit(vector<vector<char>>& maze, vector<int>& entrance) {
-          int m = maze.size();
-        int n = maze[0].size();
-        
-        queue<pair<int, int>> que;
-        que.push({entrance[0], entrance[1]});
-        maze[entrance[0]][entrance[1]] = '+'; //marking it visited
-        int steps = 0;
-        
-        while(!que.empty()) {
-            int size = que.size();
-            
-            while(size--) {
-                pair<int, int> temp = que.front();
-                que.pop();
+            int n = maze.size();
+    int m = maze[0].size();
+    queue<pair<int, int>> q;
+    q.push({entrance[0], entrance[1]});
+    maze[entrance[0]][entrance[1]] = '+';
+
+    int steps = 0;
+    while (!q.empty())
+    {
+        int size = q.size();
+        while (size--)
+        {
+            pair<int, int> p = q.front();
+            q.pop();
+            int x = p.first;
+            int y = p.second;
+            if (p != make_pair(entrance[0], entrance[1]) and (x == 0 || y == 0 || x == n - 1 || y == m - 1))
+            {
+             
                 
-                if(temp != make_pair(entrance[0], entrance[1]) && 
-                   (temp.first == 0 || temp.first == m-1 || temp.second == 0 || temp.second == n-1))
                     return steps;
                 
-                for(auto &dir : directions) {
-                    int i = temp.first  + dir[0];
-                    int j = temp.second + dir[1];
-
-                    if(i >= 0 && i < m && j >= 0 && j < n && maze[i][j] != '+') {
-                        que.push({i, j});
-                        maze[i][j] = '+'; //marking it as visited
-                    }
-                }
-                
             }
-            steps++;
+            for (auto dir : directions)
+            {
+                int newx = x + dir[0];
+
+                int newy = y + dir[1];
+                if (newx >= 0 && newx < n && newy >= 0 && newy < m && maze[newx][newy] !='+')
+                {
+                    maze[newx][newy] = '+';
+                    q.push({newx, newy});
+                }
+            }
         }
-        
-        return -1;
+        steps++;
+    }
+    return -1;
     }
 };
