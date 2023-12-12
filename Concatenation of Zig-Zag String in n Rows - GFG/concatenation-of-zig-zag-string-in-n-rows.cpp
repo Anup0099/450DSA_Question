@@ -6,30 +6,27 @@ using namespace std;
 
 class Solution{
     public:
-    string convert(string s, int n) {
-        //code
-        int mod=0,currow=0;
-        vector<string>ans(n);
-        if(n==1)return s;
-        for(auto it:s)
-        {
-            ans[currow].push_back(it);
-            if(currow==0)
-            {
-                mod=1;
-            }
-            if(currow==n-1)
-            {
-                mod=-1;
-            }
-            currow += mod;
-        }
-        s.clear();
-        for(auto it:ans)
-        {
-            s.append(it);
-        }
-        return s;
+    string convert(string s, int r) {
+        int n = s.length();
+    vector<string> ans(r);
+    int currow = 0, mod = 0;
+    if(r==1)return s;
+    for (int i = 0; i < n; i++)
+    {
+        
+        ans[currow].push_back(s[i]);
+        if (currow == 0)
+            mod = 1;
+        if (currow == r - 1)
+            mod = -1;
+        currow += mod;
+    }
+    s.clear();
+    for (auto it : ans)
+    {
+        s += it;
+    }
+    return s;
         
     }
 };
